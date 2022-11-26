@@ -1,9 +1,9 @@
-import express from 'express';
-import cors from 'cors';
-import mongoose from 'mongoose';
-import secret from './secret.js';
+const express = require("express");
+const cors = require("cors");
+const mongoose = require("mongoose");
+const secret = require("./secret");
 
-export default () => {
+module.exports = () => {
     const app = express();
 
     app.use(express.json());
@@ -15,6 +15,7 @@ export default () => {
     });
     
     // 여기에 라우팅 추가
+    const boardRouter = require("../src/controller/boardController")(app);
 
     // DB connection
     async function connect() {
@@ -25,4 +26,4 @@ export default () => {
 
     connect();
     return app;
-}
+};

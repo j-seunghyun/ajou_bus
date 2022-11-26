@@ -15,7 +15,4 @@ const resultResponse = ({isSuccess, code, message}, result) => {
     }
 };
 
-export {
-    basicResponse,
-    resultResponse,
-}
+module.exports = { basicResponse, resultResponse };
