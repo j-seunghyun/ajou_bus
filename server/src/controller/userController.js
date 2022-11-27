@@ -1,5 +1,4 @@
 const userService = require("../services/userService");
-const status = require("../../config/responseStatus");
 const response = require("../../config/response");
 const { basicResponse, resultResponse } = require("../../config/response");
 
@@ -10,7 +9,7 @@ exports.signup = async function (req, res, err) {
         // console.log(studentID, "+", nickname, "+", email, "+", password);
         const isAjouEmail = await userService.checkAjouEmail(email); //ajou email이면 true, 아니면 false
         //console.log(isAjouEmail);
-        
+        if(!isAjouEmail) return res.send(basicResponse(false, 400, "아주대 이메일 형식이 아닙니다."));
         if(!studentID || !nickname || !email || !password) return res.send(basicResponse(response.USER_PARAMS_EMPTY));
         const userFlag = await userService.userCheck(studentID, nickname, email); // true면 중복 false면 진행
 
@@ -28,8 +27,19 @@ exports.signup = async function (req, res, err) {
 
 exports.signin = async function (req, res, err) {
     try{
-
+        const { email, password} = req.body;
+        const loginFlag = await userService.signin(email, password);  //return이 0이면 이메일이 db에 없거나 비번오류, userData오면 성공
+        if(loginFlag.result){
+            req.session.loginData = loginFlag.userData;
+            return res.send(basicResponse(response.loginSUCCESS));
+        }else{
+            return res.send(basicResponse(false, 400, loginFlag.msg));
+        }
     }catch(error){
-
+        return res.send(basicResponse(response.DB_ERROR));
     }
-}
+};
+
+exports.logout = async function (req, res, err){
+
+};
