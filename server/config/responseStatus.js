@@ -1,6 +1,24 @@
+const basicResponse = ({isSuccess, code, message}) => {
+    return {
+        isSuccess: isSuccess,
+        code: code,
+        message: message
+    }
+};
+
+const resultResponse = ({isSuccess, code, message}, result) => {
+    return {
+        isSuccess: isSuccess,
+        code: code,
+        message: message,
+        result: result
+    }
+};
 module.exports = {
-	SUCCESS: { isSuccess: true, code: 1000, message: "성공" },
-	FAIL : {isSuccess: false, code: 400, message:"실패"},
-    DB_ERROR: { isSuccess: false, code: 9000, message: "데이터 베이스 에러" },
-	SERVER_ERROR: { isSuccess: false, code: 8000, message: "서버 에러" },
+    basicResponse,
+    resultResponse,
+    SUCCESS: { isSuccess:true, code: 200, message: "성공"},
+    DB_ERROR: { isSuccess: false, code: 400, message: "데이터 베이스 에러"},
+    USER_PARAMS_EMPTY: {isSuccess:false, code:400, message:"유저 데이터 누락"},
+    USER_EXISTS: {isSuccess:false, code:400, message:"유저가 이미 존재합니다."},
 };

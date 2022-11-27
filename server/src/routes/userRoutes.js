@@ -1,5 +1,8 @@
-module.exports = (app) => {
-    const user = require("../controller/userController");
+const express = require('express');
+const router = express.Router();
+const user = require("../controller/userController");
     // 회원가입 API 작성
-    app.post("/api/signup", user.signup);
-};
+router.post("/api/signup", user.signup);
+router.post("/api/login", user.signin);
+
+module.exports = router;
