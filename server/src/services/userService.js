@@ -1,6 +1,10 @@
 const { basicResponse, resultResponse } = require("../../config/response");
-const User = require('../models/userModel');
+const User = require('../schemas/user');
+const Auth = require('../schemas/auth');
+const crypto = require('crypto');
 const bcrypt = require('bcrypt');
+const nodemailer = require("nodemailer");
+const secret = require('../../config/secret');
 exports.userCheck = async function (studentID, nickname, email) {
     try {
         const userFlag = await User.findOne().or([{ studentID: studentID}, { nickname: nickname }, { email: email}]); //db에 이메일이나 학번 닉네임 중복확인
@@ -74,5 +78,58 @@ exports.signin = async function (email, password){
             result:0,
             msg:"데이터베이스 오류"
         };
+    }
+}
+
+exports.sendAjouEmail = async function(email){
+    try{
+        const findAuth = await Auth.remove({
+            email: email
+        }); //기존에 해당 메일의 인증번호는 다 삭제
+
+        let transporter = nodemailer.createTransport({
+            service: "Gmail",
+            host: "smtp.gmail.com",
+            secrue: true,
+            port: 465,
+            auth: {
+                user: secret.email.id,
+                pass: secret.email.password
+            }
+        });
+        const token = crypto.randomBytes(6).toString('hex');
+        let tokenInfo = await transporter.sendMail({
+            from: secret.email.id,
+            to: email,
+            subject: "[ajou_bus] 아주대학교 학생 인증을 위한 이메일입니다.",
+            text: "아주대학교 학생임을 인증하기 위한 인증번호는 다음과 같습니다.\n" + token
+        });
+        const authFlag = await Auth.create({
+            email,
+            token
+        });
+        if(authFlag) return true;
+        else return false;
+    }catch(error){
+        console.error(error);
+        return false;
+    }
+};
+
+exports.checkToken = async function(email, token){
+    try{
+        const authInfo = await Auth.findOne({
+            email: email
+        });
+        if(authInfo.token === token){
+            await Auth.remove({
+                email: email
+            }); 
+            return 0;
+        }
+        else return 1;
+    }catch(error){
+        console.error(error);
+        return 2;
     }
 }
