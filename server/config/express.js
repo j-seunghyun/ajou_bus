@@ -5,6 +5,7 @@ const session = require('express-session');
 const secret = require('./secret');
 const app = express();
 const userRouter = require('../src/routes/userRoutes');
+const stationRouter = require('../src/routes/stationRoutes');
 const connect = require('../src/schemas/index');
 
 module.exports =  () => {
@@ -30,6 +31,7 @@ module.exports =  () => {
     
     // 여기에 라우팅 추가
     app.use('/', userRouter);
+    app.use('/', stationRouter);
 
 
 

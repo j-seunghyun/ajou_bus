@@ -3,7 +3,6 @@
 config/secret.js
 config/database.js
 .env
-
 # Logs
 logs
 *.log
