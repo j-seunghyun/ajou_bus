@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const AutoIncrementFactory = require('mongoose-sequence');
 const secret = require('../../config/secret');
 const station = require('./station');
 const auth = require('./auth');

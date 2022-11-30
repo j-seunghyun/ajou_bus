@@ -29,5 +29,6 @@ module.exports = {
     EMAIL_SUCCESS: {isSuccess: true, code: 200, message: "인증번호를 해당메일로 전송하였습니다."},
     AJOU_STUDENT: {isSuccess: true, code: 200, message: "아주대학생 인증이 완료되었습니다."},
     FALSE_TOKEN : {isSuccess: false, code: 400, message: "인증번호 오류입니다."},
-    ALL_STATION : {isSuccess: true, code: 200, message: "모든 버스 노선 정보를 가져왔습니다."}
+    ALL_SEME_STATION : {isSuccess: true, code: 200, message: "모든 학기 버스 노선 정보를 가져왔습니다."},
+    ALL_VACA_STATION : {isSuccess: true, code: 200, message: "모든 방학 버스 노선 정보를 가져왔습니다."}
 };

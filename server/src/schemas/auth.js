@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 
-//학번, 이메일, 닉네임, 비밀번호,
 const authSchema = new mongoose.Schema({
     email: {
         type: String,
