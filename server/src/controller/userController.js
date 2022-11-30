@@ -1,6 +1,6 @@
 const userService = require("../services/userService");
 const response = require("../../config/response");
-const { basicResponse, resultResponse, NOT_AJOU_EMAIL, DB_ERROR, AJOU_STUDENT, FALSE_TOKEN } = require("../../config/response");
+const { basicResponse, resultResponse, NOT_AJOU_EMAIL, DB_ERROR, AJOU_STUDENT, FALSE_TOKEN, SIGNUPSUCCESS } = require("../../config/response");
 
 // request파라미터 여부확인 -> 에러처리 -> 비즈니스로직작성
 exports.signup = async function (req, res, err) {
@@ -16,8 +16,8 @@ exports.signup = async function (req, res, err) {
         if(userFlag) return res.send(basicResponse(response.USER_DUP));
         const isSignup = await userService.signup(studentID, nickname, email, password);
 
-        if(isSignup) return res.send(resultResponse(true, 200, "회원가입이 완료되었습니다.", 1 ));
-        else return res.send(resultResponse(response.DB_ERROR));
+        if(isSignup) return res.send(basicResponse(SIGNUPSUCCESS));
+        else return res.send(basicResponse(response.DB_ERROR));
 
     } catch (error) {
         console.log(error);
@@ -47,14 +47,14 @@ exports.logout = async function (req, res, next){
             await req.session.destroy(function(err){
                 if(err) console.error(err);
                 else{
-                    res.redirect('/');
+                    return res.send('로그아웃 성공');
                 }
             })
         }
     }catch(err){
         console.error(err);
     }
-    res.redirect('/');
+    return res.send('로그아웃 성공');
 };
 
 exports.sendEmail = async function(req, res, err){
@@ -78,7 +78,7 @@ exports.checkAuth = async function(req, res, err){
 
 
     const checkToken = await userService.checkToken(email, token);
-    if(!checkToken) return res.send(resultResponse(AJOU_STUDENT));
-    else if(checkToken == 1) return res.send(resultResponse(FALSE_TOKEN));
+    if(!checkToken) return res.send(basicResponse(AJOU_STUDENT));
+    else if(checkToken == 1) return res.send(basicResponse(FALSE_TOKEN));
     else return res.send(basicResponse(DB_ERROR));
 }

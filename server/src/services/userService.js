@@ -69,7 +69,7 @@ exports.signin = async function (email, password){
         }else{
             return {
                 result:0,
-                msg:"해당 이메일을 데이터베이스에서 찾을 수 없습니다."
+                msg:"해당 이메일은 존재하지 않습니다."
             };
         }
     }catch(error){

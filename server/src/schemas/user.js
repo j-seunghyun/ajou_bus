@@ -13,10 +13,14 @@ const userSchema = new mongoose.Schema({
     },
     password: {
         type: String,
-        require: true
+        required: true
     },
     nickname: {
         type: String,
+        required: true
+    },
+    station: { // 자주 타는 노선 
+        type: Number,
         required: true
     }
 },{timestamps: true}); //createdAt, updatedAt 생성
