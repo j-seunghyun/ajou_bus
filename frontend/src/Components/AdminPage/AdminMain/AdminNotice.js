@@ -1,5 +1,5 @@
 
-const Notice = () =>{
+const AdminNotice = () =>{
 
     return(
         <div id="notice_frame">
@@ -16,4 +16,4 @@ const Notice = () =>{
     );
 }
 
-export default Notice;
+export default AdminNotice;

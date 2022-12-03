@@ -1,5 +1,5 @@
 import "./adminnotice.css";
-import Notice from "./Notice";
+import AdminNotice from "./AdminNotice";
 
 const AdminNoticeMain = () =>{
 
@@ -21,7 +21,7 @@ const AdminNoticeMain = () =>{
             </div>
             <div id= "notices_div">
                 <div id="notices_frame">
-                    <Notice/>
+                    <AdminNotice/>
                 </div>
             </div>
             <div id="button_div">

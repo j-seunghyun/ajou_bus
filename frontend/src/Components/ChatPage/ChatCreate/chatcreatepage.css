@@ -1,0 +1,158 @@
+#head_outer_div{
+
+    position:relative;
+    height: 100px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#main_head_frame{
+    /* Header */
+
+    width:374px;
+    height: 40px;
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+}
+
+#chat_create_outer_div{
+    position: relative;
+    height: 558px;
+    top: 50px;
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#chat_create_name_div{
+    position: relative;
+    width: 343px;
+    height: 93px;
+
+    display:flex;
+    flex-direction: column;
+}
+
+#chat_create_name_set {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #000000;
+}
+
+#chat_create_name{
+    box-sizing: border-box;
+    position: relative;
+    height:50px;
+
+    background: #F6F6F6;
+    border: 1px solid #E8E8E8;
+    border-radius: 8px;
+}
+
+#chat_create_number_div{
+    position: relative;
+    width: 343px;
+    height: 93px;
+    top:30px;
+
+    display:flex;
+    flex-direction: column;
+}
+
+#chat_create_number_set{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #000000;
+}
+
+#chat_create_password_div{
+    position: relative;
+    width: 343px;
+    height: 93px;
+    top: 30px;
+
+    display:flex;
+    flex-direction: column;
+}
+
+#chat_create_password_set{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #000000;
+}
+
+#chat_create_password{
+    box-sizing: border-box;
+    position: relative;
+    height:50px;
+
+    background: #F6F6F6;
+    border: 1px solid #E8E8E8;
+    border-radius: 8px;
+}
+
+#chat_create_button_div{
+    position: relative;
+    height:51px;
+    top: 130px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#chat_create_button{
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 32px;
+    gap: 12px;
+
+    position: relative;
+    width: 343px;
+    height: 51px;
+
+    background: #7F265B;
+    border-radius: 20px;
+    border: 0px;
+
+    /* UI - 16 Semi */
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    /* White */
+
+    color: #FFFFFF;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
