@@ -36,6 +36,7 @@ exports.signup = async function (studentID, nickname, email, password){
             nickname,
             email,
             password: hashedpw,
+            level: 0,
             createdAt: Date.now()
         });
         return user;
