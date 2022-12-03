@@ -1,3 +1,10 @@
+import NoticeCreate from "../../../Components/AdminPage/AdminCreate/NoticeCreate";
+
+
 export const AdminCreate = () => {
-  return <div>AdminCreate</div>;
+  return (
+      <div>
+        <NoticeCreate/>
+      </div>
+  )
 };

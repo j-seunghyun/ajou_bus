@@ -1,3 +1,9 @@
+import AdminNoticeMain from "../../../Components/AdminPage/AdminMain/AdminNoticeMain";
+
 export const AdminMain = () => {
-  return <div>AdminMain</div>;
+  return (
+      <div>
+        <AdminNoticeMain/>
+      </div>
+  );
 };

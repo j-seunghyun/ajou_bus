@@ -1,3 +1,9 @@
+import LoginForm from "../../../Components/AdminPage/AdminLogin/LoginForm";
+
 export const AdminLogin = () => {
-  return <div>AdminLogin</div>;
+  return (
+      <div>
+          <LoginForm/>
+      </div>
+  );
 };
