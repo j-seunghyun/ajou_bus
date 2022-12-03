@@ -6,6 +6,7 @@ const secret = require('./secret');
 const app = express();
 const userRouter = require('../src/routes/userRoutes');
 const stationRouter = require('../src/routes/stationRoutes');
+const noticeRouter = require('../src/routes/noticeRoutes');
 const connect = require('../src/schemas/index');
 
 module.exports =  () => {
@@ -32,10 +33,7 @@ module.exports =  () => {
     // 여기에 라우팅 추가
     app.use('/', userRouter);
     app.use('/', stationRouter);
-
-
-
-    // 라우팅 부분
+    app.use('/', noticeRouter);
 
     connect();
     
