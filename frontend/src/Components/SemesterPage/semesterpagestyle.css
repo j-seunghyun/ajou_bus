@@ -1,0 +1,62 @@
+#main_head_frame{
+    /* Header */
+
+    width:374px;
+    height: 40px;
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+}
+#head_menu_button{
+    border:0px;
+    background-color: #FFFFFF;
+}
+#head_login_button{
+    border:0px;
+    background-color: #FFFFFF;
+}
+
+#semester_body_frame{
+    position: relative;
+    height:1331px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#semester_gwangyo_text{
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+
+
+    color: #000000;
+}
+
+#semester_gwangyo_frame{
+    position: relative;
+    width: 374px;
+}
+
+#semester_etc_frmae{
+    position: relative;
+    width: 374px;
+}
+#semester_etc_text{
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+
+    color: #000000;
+}

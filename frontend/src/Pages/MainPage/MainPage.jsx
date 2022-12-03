@@ -1,3 +1,9 @@
+import MainHead from "../../Components/MainPage/MainHead";
+
 export const MainPage = () => {
-  return <div>Main</div>;
+  return (
+      <div>
+        <MainHead/>
+      </div>
+  );
 };

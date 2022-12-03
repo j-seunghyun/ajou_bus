@@ -1,3 +1,9 @@
+import ChatMain from "../../../Components/ChatPage/ChatMain/ChatMain";
+
 export const ChatList = () => {
-  return <div>ChatList</div>;
+  return (
+      <div>
+        <ChatMain/>
+      </div>
+  );
 };

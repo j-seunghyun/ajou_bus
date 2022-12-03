@@ -1,3 +1,9 @@
+import ChatCreatePage from "../../../Components/ChatPage/ChatCreate/ChatCreatePage";
+
 export const ChatCreate = () => {
-  return <div>ChatCreate</div>;
+  return (
+      <div>
+        <ChatCreatePage/>
+      </div>
+  );
 };

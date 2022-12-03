@@ -1,3 +1,9 @@
+import ChatDetailPage from "../../../Components/ChatPage/ChatDetail/ChatDetailPage";
+
 export const ChatDetail = () => {
-  return <div>Chat Detail</div>;
+  return (
+      <div>
+        <ChatDetailPage/>
+      </div>
+  );
 };

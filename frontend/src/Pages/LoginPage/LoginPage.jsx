@@ -1,4 +1,10 @@
+import LoginMainPage from "../../Components/LoginPage/LoginMainPage";
+
 export const LoginPage = () => {
   console.log("1");
-  return <div>Login</div>;
+  return (
+      <div>
+        <LoginMainPage/>
+      </div>
+  );
 };

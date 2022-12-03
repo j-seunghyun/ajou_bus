@@ -1,0 +1,377 @@
+#notice_head{
+    /* 아주 교통 관리자 페이지 */
+
+
+    position: relative;
+    text-align: center;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 32px;
+    /* identical to box height, or 64% */
+
+
+    color: #000000;
+}
+
+#notice{
+    /* 공지사항 */
+    text-align: center;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 68px;
+
+    color: #000000;
+}
+
+#notice_menu_button_div{
+    /* 드롭다운 프레임 */
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    left: 0%;
+    right: 0%;
+    top: 23.1%;
+    bottom: 71.98%;
+
+}
+
+#menu_div{
+    /* Frame 515 */
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 12px;
+
+    width: 343px;
+    height: 36px;
+
+    /* white */
+
+    background: #FFFFFF;
+    /* subtle-2 */
+
+    border: 2px solid #AFB1B6;
+    border-radius: 8px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+#dropdown_text{
+    /* 전체 */
+
+
+    width: 287px;
+    height: 20px;
+
+    /* label medium */
+
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+    letter-spacing: 0.4px;
+
+    /* subtle-1 */
+
+    color: #61646B;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+#dropdown_button{
+    /* Arrow - Down 2 */
+    /* Inside auto layout */
+
+    box-sizing: border-box;
+
+    /* subtle-1 */
+
+    flex: none;
+    flex-grow: 0;
+}
+#button_div{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    position: relative;
+    height: 30px;
+
+}
+
+#select{
+    /* validation button
+
+Atom of All Buttons
+*/
+
+    /* Auto layout */
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 16px;
+    margin: 5px;
+
+    position: relative;
+
+    background: #7F265B;
+    border-radius: 4px;
+
+    height: 19px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    /* /Gray / White */
+
+    color: #FFFFFF;
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#modify{
+    /* validation button
+
+Atom of All Buttons
+*/
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 16px;
+
+    position: relative;
+    margin: 5px;
+
+    background: #7F265B;
+    border-radius: 4px;
+    /* Success */
+
+    height: 19px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    /* /Gray / White */
+
+    color: #FFFFFF;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#create{
+    /* validation button
+
+Atom of All Buttons
+*/
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 16px;
+
+    position: relative;
+    margin: 5px;
+
+    background: #7F265B;
+    border-radius: 4px;
+
+    height: 19px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    /* /Gray / White */
+
+    color: #FFFFFF;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+#delete{
+    /* validation button
+
+Atom of All Buttons
+*/
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 16px;
+
+    position: relative;
+    margin: 5px;
+
+    background: #7F265B;
+    border-radius: 4px;
+
+    /* Success */
+
+    height: 19px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    /* /Gray / White */
+
+    color: #FFFFFF;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+#notices_div{
+    /* Frame 690 */
+    position: relative;
+    display:flex;
+    height: 800px;
+    left: 0px;
+    top: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+#notices_frame{
+
+    position: relative;
+
+    width: 954px;
+    height: 621px;
+
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    padding:20px;
+
+
+    background: #FFFFFF;
+    border: 3px solid #AFB1B6;
+    border-radius: 30px;
+}
+
+#notice_frame{
+    position: relative;
+    width: 828px;
+    height: 58px;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    background: #FFFFFF;
+    border-width: 1px 0px;
+    border-style: solid;
+    border-color: #AFB1B6;
+}
+
+#notice_category{
+    position:relative;
+    left: 1.81%;
+    right: 10%;
+}
+
+#notice_content{
+    position:relative;
+    left: 15%;
+}
+#notice_date{
+    position:relative;
+    left: 50%;
+}
+
+#button_div{
+    /* PageNumberFrame */
+    position: relative;
+    bottom: 10.17%;
+
+    display:flex;
+    flex-display: row;
+    justify-content: center;
+    gap: 5px;
+}
+
+.button_style{
+    /* Frame 678 */
+
+
+    width: 22px;
+    height: 22px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+

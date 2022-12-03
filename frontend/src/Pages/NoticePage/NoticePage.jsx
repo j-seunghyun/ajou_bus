@@ -1,3 +1,9 @@
+import MainNotice from "../../Components/MainPage/MainNotice";
+
 export const NoticePage = () => {
-  return <div>Notice</div>;
+  return (
+      <div>
+        <MainNotice/>
+      </div>
+  );
 };

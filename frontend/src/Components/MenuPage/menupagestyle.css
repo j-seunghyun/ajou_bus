@@ -1,0 +1,274 @@
+#head_outer_div{
+
+    position:relative;
+    height: 100px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#main_head_frame{
+    /* Header */
+
+    width:374px;
+    height: 40px;
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+}
+#head_menu_button{
+    border:0px;
+    background-color: #FFFFFF;
+}
+#head_login_button{
+    border:0px;
+    background-color: #FFFFFF;
+}
+
+#menu_page_body_frame{
+    position: relative;
+    height: 588px;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu_page_button_inner_frame{
+    position: relative;
+    width: 343px;
+    height: 588px;
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#menu_home_login_frame{
+    position: relative;
+    width: 343px;
+    height: 130px;
+    top: 29px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+}
+
+#menu_home_frame{
+    position: absolute;
+    left: 30px;
+    width: 94px;
+    height: 120px;
+    top: 9px;
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#menu_home_button{
+    border:0px;
+    background-color: #FFFFFF;
+}
+#menu_home_text{
+    position: relative;
+    top:0px;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 17px;
+    line-height: 22px;
+    /* identical to box height, or 129% */
+
+    letter-spacing: -0.408px;
+
+    color: #000000;
+}
+
+#menu_login_frame{
+    position: absolute;
+    top: 9px;
+    right:30px;
+    width: 94px;
+    height: 105px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+#menu_login_button{
+    border:0px;
+    background-color: #FFFFFF;
+}
+#menu_login_text{
+    position: relative;
+    top:0px;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 17px;
+    line-height: 22px;
+    /* identical to box height, or 129% */
+
+    letter-spacing: -0.408px;
+
+    color: #000000;
+}
+
+#menu_notice_semester_frame{
+    position: relative;
+    width: 343px;
+    height: 130px;
+    top: 40px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#menu_notice_frame{
+    position: absolute;
+    left: 30px;
+    width: 94px;
+    height: 120px;
+    top: 9px;
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#menu_notice_button{
+    border:0px;
+    background-color: #FFFFFF;
+}
+
+#menu_notice_text{
+    position: relative;
+    top:0px;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 17px;
+    line-height: 22px;
+    /* identical to box height, or 129% */
+
+    letter-spacing: -0.408px;
+
+    color: #000000;
+}
+
+#menu_semester_frame{
+    position: absolute;
+    top: 9px;
+    right:30px;
+    width: 94px;
+    height: 105px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#menu_semester_button{
+    border:0px;
+    background-color: #FFFFFF;
+}
+
+#menu_semester_text{
+    position: relative;
+    top:0px;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 129% */
+
+    letter-spacing: -0.408px;
+
+    color: #000000;
+}
+
+#menu_vacation_chat_frame{
+    position: relative;
+    width: 343px;
+    height: 130px;
+    top: 40px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#menu_vacation_frame{
+    position: absolute;
+    left: 30px;
+    width: 94px;
+    height: 120px;
+    top: 9px;
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#menu_vacation_button{
+    border:0px;
+    background-color: #FFFFFF;
+}
+#menu_vacation_text{
+    position: relative;
+    top:0px;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 129% */
+
+    letter-spacing: -0.408px;
+
+    color: #000000;
+}
+
+#menu_chat_frame{
+    position: absolute;
+    top: 9px;
+    right:30px;
+    width: 94px;
+    height: 105px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#menu_chat_button{
+    border:0px;
+    background-color: #FFFFFF;
+}
+
+#menu_chat_text{
+    position: relative;
+    top:0px;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 22px;
+    /* identical to box height, or 129% */
+
+    letter-spacing: -0.408px;
+
+    color: #000000;
+}
