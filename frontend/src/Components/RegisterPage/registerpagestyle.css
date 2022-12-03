@@ -1,0 +1,162 @@
+#register_main_title{
+    position: relative;
+    top:44px;
+    text-align: center;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+    /* identical to box height, or 123% */
+}
+
+#register_main_page_outer_frame{
+    position: relative;
+    height: 476px;
+    top: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+#register_main_body_frame{
+    position: relative;
+    width: 342px;
+    height: 476px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#register_id_frame{
+    position: relative;
+    width: 343px;
+    height: 50px;
+    top: 19px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#register_id_field{
+    box-sizing: border-box;
+
+    position: absolute;
+    left: 0%;
+    right: 25.95%;
+    top: 0%;
+    bottom: 0%;
+
+    background: #F6F6F6;
+    border: 1px solid #E8E8E8;
+    border-radius: 8px;
+}
+
+#register_check_button{
+
+    height:30px;
+    border:0px;
+    background-color: #FFFFFF;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: right;
+
+    color: #458DFC;
+}
+
+#register_email_field{
+    box-sizing: border-box;
+
+    position: relative;
+    width: 343px;
+    height: 50px;
+
+    background: #F6F6F6;
+    border: 1px solid #E8E8E8;
+    border-radius: 8px;
+}
+
+#register_email_authentication_frame{
+    position: relative;
+    width: 343px;
+    height: 50px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#register_email_authentication_number{
+    box-sizing: border-box;
+
+    width: 208px;
+    height: 50px;
+    position: absolute;
+    left: 0px;
+
+    background: #F6F6F6;
+    border: 1px solid #E8E8E8;
+    border-radius: 8px;
+}
+
+#register_email_authentication_button{
+    width: 125px;
+    height: 44px;
+
+    background: #7F265B;
+    border-radius: 4px;
+
+    border:0px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    /* /Gray / White */
+
+    color: #FFFFFF;
+}
+
+#register_password_field{
+    box-sizing: border-box;
+
+    position: relative;
+    width: 343px;
+    height: 50px;
+
+    background: #F6F6F6;
+    border: 1px solid #E8E8E8;
+    border-radius: 8px;
+}
+
+#register_button{
+    width: 343px;
+    height: 51px;
+    position: relative;
+
+    background: #7F265B;
+    border-radius: 100px;
+
+    border: 0px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    /* White */
+
+    color: #FFFFFF;
+}

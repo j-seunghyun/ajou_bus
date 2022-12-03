@@ -20,6 +20,15 @@
     justify-content: space-between;
     padding: 0px;
 }
+#head_menu_button{
+    border:0px;
+    background-color: #FFFFFF;
+}
+#head_login_button{
+    border:0px;
+    background-color: #FFFFFF;
+}
+
 
 #chat_create_outer_div{
     position: relative;

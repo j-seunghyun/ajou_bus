@@ -1,3 +1,9 @@
+import RegisterMainPage from "../../Components/RegisterPage/RegisterMainPage";
+
 export const RegisterPage = () => {
-  return <div>Register</div>;
+  return (
+      <div>
+        <RegisterMainPage/>
+      </div>
+  );
 };

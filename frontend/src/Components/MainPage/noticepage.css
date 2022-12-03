@@ -22,6 +22,15 @@
     display:flex;
     align-items: center;
 }
+#head_menu_button{
+    border:0px;
+    background-color: #FFFFFF;
+}
+#head_login_button{
+    border:0px;
+    background-color: #FFFFFF;
+}
+
 
 #notice_title_sub_frame{
     /* 작성자 이름 및 작성일 */

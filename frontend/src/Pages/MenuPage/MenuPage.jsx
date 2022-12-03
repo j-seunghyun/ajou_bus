@@ -1,3 +1,9 @@
+import MenuBarPage from "../../Components/MenuPage/MenuBarPage";
+
 export const MenuPage = () => {
-  return <div>Menu</div>;
+  return (
+      <div>
+        <MenuBarPage/>
+      </div>
+  );
 };
