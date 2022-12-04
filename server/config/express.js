@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
+const MongoStore = require('connect-mongo');
 const secret = require('./secret');
 const app = express();
 const userRouter = require('../src/routes/userRoutes');
@@ -20,6 +21,10 @@ module.exports =  () => {
         key: secret.sessionKey.key,
         secret: secret.sessionKey.secret,
         resave: false,
+        store: MongoStore.create({
+            mongoUrl: secret.db.atlas
+            ,dbName: 'ajou_bus'
+        }),
         saveUninitialized: false,
         cookie:{
             expires: 60 * 60 * 3

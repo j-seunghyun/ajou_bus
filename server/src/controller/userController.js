@@ -5,7 +5,7 @@ const { basicResponse, resultResponse, NOT_AJOU_EMAIL, DB_ERROR, AJOU_STUDENT, F
 // request파라미터 여부확인 -> 에러처리 -> 비즈니스로직작성
 exports.signup = async function (req, res, err) {
     try {
-        const { studentID, nickname, email, password} = req.body;
+        const { studentID, nickname, email, password, station} = req.body;
         //console.log(studentID, "+", nickname, "+", email, "+", password);
         const isAjouEmail = await userService.checkAjouEmail(email); //ajou email이면 true, 아니면 false
         //console.log(isAjouEmail);
@@ -14,7 +14,7 @@ exports.signup = async function (req, res, err) {
         const userFlag = await userService.userCheck(studentID, nickname, email); // true면 중복 false면 진행
 
         if(userFlag) return res.send(basicResponse(response.USER_DUP));
-        const isSignup = await userService.signup(studentID, nickname, email, password);
+        const isSignup = await userService.signup(studentID, nickname, email, password, station);
 
         if(isSignup) return res.send(basicResponse(SIGNUPSUCCESS));
         else return res.send(basicResponse(response.DB_ERROR));
@@ -31,6 +31,7 @@ exports.signin = async function (req, res, err) {
         const loginFlag = await userService.signin(email, password);  //return이 0이면 이메일이 db에 없거나 비번오류, userData오면 성공
         if(loginFlag.result){
             req.session.loginData = loginFlag.userData;
+            req.session.is_LoggedIn = true;
             return res.send(basicResponse(response.loginSUCCESS));
         }else{
             return res.send(basicResponse({isSuccess: false, code: 400, message: loginFlag.msg}));
@@ -44,7 +45,7 @@ exports.logout = async function (req, res, next){
     let session = req.session;
     try{
         if(session.loginData){
-            await req.session.destroy(function(err){
+            await session.destroy(function(err){
                 if(err) console.error(err);
                 else{
                     return res.send('로그아웃 성공');
@@ -54,7 +55,6 @@ exports.logout = async function (req, res, next){
     }catch(err){
         console.error(err);
     }
-    return res.send('로그아웃 성공');
 };
 
 exports.sendEmail = async function(req, res, err){

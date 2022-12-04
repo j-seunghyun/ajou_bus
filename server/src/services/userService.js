@@ -28,7 +28,7 @@ exports.checkAjouEmail = function(email){
         return true;
 }
 
-exports.signup = async function (studentID, nickname, email, password){
+exports.signup = async function (studentID, nickname, email, password, station){
     try{
         const hashedpw = await bcrypt.hash(password, 12);
         const user = await User.create({
@@ -37,6 +37,7 @@ exports.signup = async function (studentID, nickname, email, password){
             email,
             password: hashedpw,
             level: 0,
+            station,
             createdAt: Date.now()
         });
         return user;
@@ -48,14 +49,18 @@ exports.signup = async function (studentID, nickname, email, password){
 
 exports.signin = async function (email, password){
     try{
+        if(!email || !password) return {
+            result: 0,
+            msg: "이메일 혹은 패스워드가 누락되었습니다."
+        }
         const userInfo = await User.findOne({
             email: email
         });
-        console.log(userInfo);
+       //console.log(userInfo);
         if(userInfo){ //이메일에 해당하는 유저가 있음
             const isEqualPw = await bcrypt.compare(password, userInfo.password);
             if(isEqualPw) {
-                let userData = { email, nickname: userInfo.nickname, studentID: userInfo.studentID};
+                let userData = { email, nickname: userInfo.nickname, studentID: userInfo.studentID, station: userInfo.station, station: userInfo.level};
                 return {
                     result :1,
                     userData
