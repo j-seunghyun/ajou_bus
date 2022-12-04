@@ -59,7 +59,7 @@ exports.logout = async function (req, res, next){
 
 exports.sendEmail = async function(req, res, err){
     const email = req.query.email;
-    const isAjouEmail = await userService.checkAjouEmail(email);
+    const isAjouEmail = userService.checkAjouEmail(email);
 
     if(!isAjouEmail) return res.send(basicResponse(NOT_AJOU_EMAIL));
 
@@ -69,9 +69,9 @@ exports.sendEmail = async function(req, res, err){
 };
 
 exports.checkAuth = async function(req, res, err){
-    const email = req.query.email;
-    const token = req.query.token;
-    const isAjouEmail = await userService.checkAjouEmail(email);
+    const email = req.body.email;
+    const token = req.body.token;
+    const isAjouEmail = userService.checkAjouEmail(email);
 
     if(!isAjouEmail) return res.send(basicResponse(NOT_AJOU_EMAIL));
     if(!token) return res.send(basicResponse(false, 400, "빈 문자열의 인증번호를 입력하였습니다."));
