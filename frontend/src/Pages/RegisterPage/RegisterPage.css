@@ -1,0 +1,133 @@
+#register_main_title {
+  margin-top: 44px;
+  text-align: center;
+
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 32px;
+}
+
+#register_main_page_outer_frame {
+  width: 100vw;
+  height: 476px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#register_main_body_frame {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#register_id_field {
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  background: #f6f6f6;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+}
+
+#register_check_button {
+  height: 30px;
+  border: 0px;
+  background-color: #ffffff;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: right;
+
+  color: #458dfc;
+}
+
+#register_email_field {
+  box-sizing: border-box;
+
+  width: 63%;
+  height: 50px;
+
+  background: #f6f6f6;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+}
+
+#register_email_authentication_frame {
+  width: 100%;
+  height: 50px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#register_email_authentication_number {
+  box-sizing: border-box;
+
+  width: 63%;
+  height: 50px;
+  margin-right: 10px;
+
+  background: #f6f6f6;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+}
+
+#register_email_authentication_button {
+  width: 35%;
+  max-width: 100px;
+  height: 44px;
+
+  background: #7f265b;
+  border-radius: 4px;
+
+  border: 0px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+#register_password_field {
+  box-sizing: border-box;
+
+  width: 100%;
+  height: 50px;
+
+  background: #f6f6f6;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+}
+
+#register_button {
+  width: 100%;
+  height: 51px;
+
+  background: #7f265b;
+  border-radius: 10px;
+  border: 0px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+
+  color: #ffffff;
+}
