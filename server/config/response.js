@@ -33,5 +33,6 @@ module.exports = {
     ALL_VACA_STATION : {isSuccess: true, code: 200, message: "모든 방학 버스 노선 정보를 가져왔습니다."},
     NOTICE_PARAMS_EMPTY: { isSuccess:false, code:400, message:"공지사항 데이터 누락"},
     CREATE_NOTICE: { isSuccess: false, code: 200, message: "공지사항 등록 완료!"},
-    IS_NOT_LOGGEDIN : { isSuccess:false, code: 400, message: "로그인이 되어있지 않습니다."}
+    IS_NOT_LOGGEDIN : { isSuccess:false, code: 400, message: "로그인이 되어있지 않습니다."},
+    NOTICE_NONE : { isSuccess:false, code: 404, message: "해당번호의 공지사항이 없습니다."}
 };

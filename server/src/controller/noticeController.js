@@ -1,6 +1,6 @@
 const noticeService = require("../services/noticeService");
 const response = require("../../config/response");
-const { basicResponse } = require("../../config/response");
+const { basicResponse, resultResponse } = require("../../config/response");
 
 exports.posting = async function (req, res, err) {
     try {
@@ -13,4 +13,16 @@ exports.posting = async function (req, res, err) {
         console.log(error);
         return res.send(response(basicResponse(response.DB_ERROR)));
     }
+};
+
+exports.allNoticeInfo = async function (req, res) {
+    const data = await noticeService.getAllNotice();
+    return res.send(resultResponse(response.SUCCESS, data));
+};
+
+exports.noticeInfo = async function (req, res) {
+    const noticeId = req.params.noticeId;
+    const data = await noticeService.getNotice(noticeId);
+    if(!data.length) return res.send(basicResponse(response.NOTICE_NONE));
+    return res.send(resultResponse(response.SUCCESS, data));
 };
