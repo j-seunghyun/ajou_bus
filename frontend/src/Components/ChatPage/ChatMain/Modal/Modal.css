@@ -1,0 +1,33 @@
+.Chat__Modal__Container {
+  position: fixed;
+  top: 30vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  min-width: 300px;
+  max-width: 600px;
+  height: 200px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Chat__Modal__Container > input {
+  width: 80%;
+  border-radius: 10px;
+  height: 50px;
+}
+
+.Chat__Modal__Container > button {
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: #7f265b;
+  color: #ffffff;
+  cursor: pointer;
+}
