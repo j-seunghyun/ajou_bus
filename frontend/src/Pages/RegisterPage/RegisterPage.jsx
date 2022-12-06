@@ -40,7 +40,7 @@ export const RegisterPage = () => {
             />
             <button
               id="register_email_authentication_button"
-              onClick={postEamilValidation}
+              onClick={postEamilValidation(state.email)}
             >
               인증번호 받기
             </button>
