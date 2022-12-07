@@ -7,5 +7,6 @@ router.post("/api/signup", user.signup);
 router.post("/api/login", user.signin);
 router.post("/api/email", user.sendEmail);
 router.post("/api/email/valid", user.checkAuth);
-router.post("/api/logout",  check.check, user.logout);
+router.post("/api/logout", check.checkLogin, user.logout);
+router.delete("/api/withdraw", check.checkLogin, user.delete);
 module.exports = router;
