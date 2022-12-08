@@ -1,7 +1,11 @@
 import "./NoticePage.css";
 import "../MainPage/MainPage.css";
+import { Link, useParams } from "react-router-dom";
+import { useGetNotice } from "./NoticePage.hook";
 
 export const NoticePage = () => {
+  const { id } = useParams();
+  const notice = useGetNotice(id);
   return (
     <div>
       <div id="head_outer_div">
@@ -17,26 +21,25 @@ export const NoticePage = () => {
       </div>
       <div id="notice_title_frame">
         <div id="notice_title_inner_frame">
-          <p>
-            11.18(금) 등교 및 학교 버스 도착 및 <br />
-            출발 장소 변경 안내
-          </p>
+          <p>{notice.title}</p>
         </div>
       </div>
       <div id="notice_title_sub_frame">
         <div id="notice_title_sub_inner_frame">
-          <p id="notice_title_sub">총괄팀 | 장승현 | 작성일 2022-11-17 |</p>
+          <p id="notice_title_sub">
+            {notice.category} | {notice.createdAt}
+          </p>
         </div>
       </div>
       <div id="notice_content_frame">
         <div id="notice_content_inner_frame">
-          <p id="main_notice_content">
-            금일 악천후로 인해 버스 운영이 중단됨을 알립니다.
-          </p>
+          <p id="main_notice_content">{notice.context}</p>
         </div>
       </div>
       <div id="notice_list_button_frame">
-        <button id="notice_list_button">목록</button>
+        <button id="notice_list_button">
+          <Link to="/">목록</Link>
+        </button>
       </div>
     </div>
   );
