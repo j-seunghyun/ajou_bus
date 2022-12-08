@@ -5,13 +5,15 @@ import {
   NoticeItem,
 } from "../../Components/MainPage";
 import "./MainPage.css";
+import { useSelectCategory } from "./MainPage.hook";
 
 export const MainPage = () => {
+  const { category, handleSelectCategory } = useSelectCategory();
   return (
     <div>
       <Header />
-      <Category />
-      <NoticeItem />
+      <Category handleSelectCategory={handleSelectCategory} />
+      <NoticeItem category={category} />
       <Footer />
     </div>
   );
