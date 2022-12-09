@@ -5,7 +5,7 @@ const { basicResponse, resultResponse, NOT_AJOU_EMAIL, DB_ERROR, AJOU_STUDENT, F
 // request파라미터 여부확인 -> 에러처리 -> 비즈니스로직작성
 exports.signup = async function (req, res, err) {
 
-        const { studentID, nickname, email, password, station} = req.body;
+        const { studentID, nickname, email, password} = req.body;
         //console.log(studentID, "+", nickname, "+", email, "+", password);
         const isAjouEmail = userService.checkAjouEmail(email); //ajou email이면 true, 아니면 false
         //console.log(isAjouEmail);
@@ -14,7 +14,7 @@ exports.signup = async function (req, res, err) {
         const userFlag = await userService.userCheck(studentID, nickname, email); // true면 중복 false면 진행
 
         if(userFlag) return res.send(basicResponse(response.USER_DUP));
-        const isSignup = await userService.signup(studentID, nickname, email, password, station);
+        const isSignup = await userService.signup(studentID, nickname, email, password);
 
         if(isSignup) return res.send(basicResponse(SIGNUPSUCCESS));
         else return res.send(basicResponse(response.DB_ERROR));
