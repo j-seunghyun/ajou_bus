@@ -39,5 +39,6 @@ module.exports = {
     MODIFY_SUCCESS: { isSuccess: true, code: 200, message: "글을 수정하였습니다."},
     DELETE_SUCCESS: { isSuccess: true, code: 200, message: "글을 삭제하였습니다."},
     NO_USER: { isSuccess: false, code: 400, message: "회원을 찾을 수 없습니다."},
-    DELETE_USER : { isSuccess: true, code: 200, message: "회원을 삭제하였습니다."}
+    DELETE_USER : { isSuccess: true, code: 200, message: "회원을 삭제하였습니다."},
+    TOKEN_EXPIRED: {isSuccess:false, code:400, message: "인증번호 시간이 만료되었습니다."}
 };

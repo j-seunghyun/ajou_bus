@@ -133,6 +133,9 @@ exports.checkToken = async function(email, token){
         const authInfo = await Auth.findOne({
             email: email
         });
+        if(!authInfo){
+            return 3;
+        }
         if(authInfo.token === token){
             await Auth.deleteOne({
                 email: email

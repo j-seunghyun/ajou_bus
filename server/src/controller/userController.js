@@ -66,6 +66,7 @@ exports.checkAuth = async function(req, res){
     const checkToken = await userService.checkToken(email, token);
     if(!checkToken) return res.send(basicResponse(AJOU_STUDENT));
     else if(checkToken == 1) return res.send(basicResponse(FALSE_TOKEN));
+    else if(checkToken == 3) return res.send(basicResponse(response.TOKEN_EXPIRED))
     else return res.send(basicResponse(DB_ERROR));
 };
 

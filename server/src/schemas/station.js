@@ -13,7 +13,7 @@ const stationSchema = new mongoose.Schema({
     },
     stationId: {
         type: Number,
-        unique: true
+        required: true
     },
     areaImg: {
         type: String,
