@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "../../../Util/axios";
 import { useEffect } from "react";
 import { useState } from "react";
 
@@ -14,7 +14,16 @@ export const useGetChatList = () => {
 };
 
 function getChatList() {
-  return axios.get("/api/chat").then((res) => res.then);
+  return axios
+    .get("/api/chat")
+    .then((res) => res.data)
+    .then((res) => {
+      const keys = Object.keys(res);
+      return keys.map((key) => ({
+        id: key,
+        title: res[key].title,
+      }));
+    });
 }
 
 export const useChatModal = () => {

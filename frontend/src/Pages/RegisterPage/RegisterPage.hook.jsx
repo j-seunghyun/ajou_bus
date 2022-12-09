@@ -1,9 +1,11 @@
 import axios from "../../Util/axios";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const useRegister = () => {
+  const navigate = useNavigate();
   const [state, setState] = useState({
-    schoolID: "",
+    studentID: "",
     nickname: "",
     email: "",
     password: "",
@@ -20,7 +22,10 @@ export const useRegister = () => {
 
   const postRegister = (flag) => () => {
     if (!flag) return;
-    axios.post("/api/signup", state).then(console.log);
+    axios.post("/api/signup", { ...state, level: 0 }).then((res) => {
+      if (res.data.code !== 200) return;
+      navigate("/login");
+    });
   };
 
   return {
@@ -30,13 +35,11 @@ export const useRegister = () => {
   };
 };
 
-let validation;
 export const useEmailValidation = () => {
   const [check, setCheck] = useState(false);
   const postEamilValidation = (email) => () => {
     axios.post(`/api/email?email=${email}`).then((res) => {
       console.log(res);
-      validation = res;
     });
   };
   const postCheckEamilValidation = (email, token) => () => {
@@ -46,8 +49,8 @@ export const useEmailValidation = () => {
         token,
       })
       .then((res) => {
-        console.log(res);
-        setCheck(true);
+        if (res.data.code === 200) setCheck(true);
+        return;
       });
   };
 
