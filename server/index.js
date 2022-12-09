@@ -19,8 +19,7 @@ io.on('connection', (socket) => {
     socket.on('req_join_room', async (msg) => {
         let roomName = 'Room_' + msg;
         // room 없으면
-        if(!rooms.includes(roomName)) {
-            rooms.push(roomName);
+        if(!rooms.includes(roomName)) rooms.push(roomName);
         socket.join(roomName);
         io.to(roomName).emit('notice_join_msg', "방에 입장하였습니다.");
     });
