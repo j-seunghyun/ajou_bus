@@ -14,7 +14,7 @@ export const SemesterPage = () => {
               <thead>
                 <tr>
                   <th>회차</th>
-                  <th colspan="2">
+                  <th colSpan="2">
                     {station.stationInfo.station} {">"}
                     {station.stationInfo.endstation}
                   </th>
@@ -22,7 +22,7 @@ export const SemesterPage = () => {
               </thead>
               <tbody>
                 {station.stationInfo.info.map((info) => (
-                  <tr>
+                  <tr key={info.round}>
                     <td>{info.round}회차</td>
                     <td>{info.stationTime}</td>
                     <td>{info.endTime}</td>

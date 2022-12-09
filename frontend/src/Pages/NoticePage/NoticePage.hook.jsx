@@ -9,13 +9,17 @@ const INIT_NOTICE = {
   category: "",
   createdAt: "",
 };
+
 export const useGetNotice = (id) => {
   const [notice, setNotice] = useState(INIT_NOTICE);
 
   useEffect(() => {
     axios
       .get(`/api/notice/${id}`)
-      .then((res) => res.data)
+      .then((res) => {
+        const [data] = res.data.result;
+        return data;
+      })
       .then(setNotice)
       .catch(() => setNotice(INIT_NOTICE));
   }, [id]);

@@ -16,9 +16,9 @@ export const RegisterPage = () => {
           <input
             type="text"
             id="register_id_field"
-            name="schoolID"
+            name="studentID"
             placeholder="학번을 입력해주세요."
-            value={state.schoolID}
+            value={state.studentID}
             onChange={handleRegisterInfo}
           />
           <input
