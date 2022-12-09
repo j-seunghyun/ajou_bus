@@ -15,20 +15,12 @@ const stationSchema = new mongoose.Schema({
         type: Number,
         unique: true
     },
-    round: {
-        type: Number,
-        required: true
-    },
     areaImg: {
         type: String,
         required: true
     },
-    startInfo:{ // 차량 하나에 대해서 출발 지점이 여러개 있는 경우가 있어서 array
-        type: Array,
-        required: true
-    },
-    endInfo: {
-        type: Array,
+    stationInfo:{ // 차량 하나에 대해서 출발 지점이 여러개 있는 경우가 있어서 array
+        type: JSON,
         required: true
     },
     fee: {

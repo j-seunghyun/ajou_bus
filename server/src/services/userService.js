@@ -114,6 +114,12 @@ exports.sendAjouEmail = async function(email){
             email,
             token
         });
+        setTimeout(function(){
+            Auth.deleteOne({
+                email,
+                token
+            });
+        }, 1000* 60* 5);  //인증번호 5분후 삭제
         if(authFlag) return true;
         else return false;
     }catch(error){
@@ -128,7 +134,7 @@ exports.checkToken = async function(email, token){
             email: email
         });
         if(authInfo.token === token){
-            await Auth.remove({
+            await Auth.deleteOne({
                 email: email
             }); 
             return 0;

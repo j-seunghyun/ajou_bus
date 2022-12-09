@@ -2,339 +2,611 @@
     {
         "station" : "목동",
         "stationId" : 1,
-        "round" : 1,
         "kind" : 0,
-        "startInfo" : [
-            {
-                "station" : "오목교 (오목교역 1번출구 마을버스 회차지점 앞)",
-                "time" : "07:00"
-            },
-            {
-                "station" : "목동오거리 (목동역7번출구)",
-                "time": "07:02"
-            }
-        ],
-        "endInfo" : [
-            {
-                "station" : "아주대학교",
-                "time" : "08:50"
-            }
-        ],
         "fee" : {
             "ticket" : 1300,
             "cash" : 1500
         },
-        "carNumber": "일류투어 9904"
+        "carNumber": "일류투어 9904",
+        "stationInfo" : {
+            "station" : "오목교 (오목교역 1번출구 마을버스 회차지점 앞)",
+            "endstation" : "아주대학교",
+            "info" : [
+                {
+                    "round": 1,
+                    "stationTime": "07:00",
+                    "endTime": "08:50"
+                }
+            ]
+        }
+    },
+    {
+        "station" : "목동",
+        "stationId" : 1,
+        "kind" : 0,
+        "fee" : {
+            "ticket" : 1300,
+            "cash" : 1500
+        },
+        "carNumber": "일류투어 9904",
+        "stationInfo": {
+            "station": "목동오거리 (목동역7번출구)",
+            "endstation": "아주대학교",
+            "info": [
+            {
+                "round": 1,
+                "stationTime": "07:02",
+                "endTime": "08:50"
+            }
+            ]
+        }
     },
     {
         "station" : "잠실",
         "stationId" : 2,
-        "round" : 1,
         "kind" : 0,
-        "startInfo" : [
-            {
-                "station" : "잠실역 롯데 백화점앞(주공522동 건너편)",
-                "time" : "07:30"   
-            },{
-                "station" : "가락시장 신 동문 앞",
-                "time": "07:35"
-            },
-            {
-                "station" : "복정역 3번출구(완불주유소) 앞",
-                "time": "07:48"
-            }
-        ],
-        "endInfo" : [{
-            "endstation" : "아주대학교",
-            "time" : "08:50"
-        }],
         "fee" : {
             "ticket" : 1300,
             "cash" : 1500
         },
-        "carNumber": "일류투어 3925"
+        "carNumber": "일류투어 3925",
+        "stationInfo" : {
+            "station" : "잠실역 롯데 백화점앞(주공522동 건너편)",
+            "endstation" : "아주대학교",
+            "info": [
+                {
+                    "round": 1,
+                    "stationTime": "07:30",
+                    "endTime":  "08:50"
+                }
+            ]
+        }
+    },
+    {
+        "station" : "잠실",
+        "stationId" : 2,
+        "kind" : 0,
+        "fee" : {
+            "ticket" : 1300,
+            "cash" : 1500
+        },
+        "carNumber": "일류투어 3925",
+        "stationInfo" : {
+            "station" : "가락시장 신 동문 앞",
+            "endstation" : "아주대학교",
+            "info": [
+                {
+                    "round": 1,
+                    "stationTime": "07:35",
+                    "endTime":  "08:50"
+                }
+            ]
+        }
+    },
+    {
+        "station" : "잠실",
+        "stationId" : 2,
+        "kind" : 0,
+        "fee" : {
+            "ticket" : 1300,
+            "cash" : 1500
+        },
+        "carNumber": "일류투어 3925",
+        "stationInfo" : {
+            "station" : "복정역 3번출구(완불주유소) 앞",
+            "endstation" : "아주대학교",
+            "info": [
+                {
+                    "round": 1,
+                    "stationTime": "07:48",
+                    "endTime":  "08:50"
+                }
+            ]
+        }
     },
     {
         "station" : "사당",
         "stationId" : 3,
-        "round" : 1,
         "kind" : 0,
-        "startInfo" : [{
-            "station" : "이수역(14번 출구)",
-            "time" : "07:45"
-        },{
-            "station" : "총신대역(7번 출구)",
-            "time": "07:48"
-        },{
-            "station" : "사당역(4번출구 홈플러스 앞)",
-            "time": "07:51"
-        },{
-            "station" : "과천주공아파트 6~7단지사이",
-            "time" : "07:56"
-        }
-        ],
-        "endInfo" : [{
-            "station" : "아주대학교",
-            "time" : "08:50"
-        }],
         "fee" : {
             "ticket" : 1300,
             "cash" : 1500
         },
-        "carNumber": "일류투어 7943"
+        "carNumber": "일류투어 7943",
+        "stationInfo" : {
+            "station" : "이수역(14번 출구)",
+            "endstation" : "아주대학교",
+            "info": [
+                {
+                    "round": 1,
+                    "stationTime": "07:45",
+                    "endTime":  "08:50"
+                }
+            ]
+        }
+    },
+    {
+        "station" : "사당",
+        "stationId" : 3,
+        "kind" : 0,
+        "fee" : {
+            "ticket" : 1300,
+            "cash" : 1500
+        },
+        "carNumber": "일류투어 7943",
+        "stationInfo" : {
+            "station" : "총신대역(7번 출구)",
+            "endstation" : "아주대학교",
+            "info": [
+                {
+                    "round": 1,
+                    "stationTime": "07:48",
+                    "endTime":  "08:50"
+                }
+            ]
+        }
+    },
+    {
+        "station" : "사당",
+        "stationId" : 3,
+        "kind" : 0,
+        "fee" : {
+            "ticket" : 1300,
+            "cash" : 1500
+        },
+        "carNumber": "일류투어 7943",
+        "stationInfo" : {
+            "station" : "사당역(4번출구 홈플러스 앞)",
+            "endstation" : "아주대학교",
+            "info": [
+                {
+                    "round": 1,
+                    "stationTime": "07:51",
+                    "endTime":  "08:50"
+                }
+            ]
+        }
+    },
+    {
+        "station" : "사당",
+        "stationId" : 3,
+        "kind" : 0,
+        "fee" : {
+            "ticket" : 1300,
+            "cash" : 1500
+        },
+        "carNumber": "일류투어 7943",
+        "stationInfo" : {
+            "station" : "과천주공아파트 6~7단지사이",
+            "endstation" : "아주대학교",
+            "info": [
+                {
+                    "round": 1,
+                    "stationTime": "07:56",
+                    "endTime":  "08:50"
+                }
+            ]
+        }
     },
     {
         "station": "분당",
         "stationId": 4,
-        "round" : 1,
         "kind" : 0,
-        "startInfo": [
-            {
-                "station" : "정자역 5번출구",
-                "time" : "08:05"
-            },
-            {
-                "station" : "미금역 7번출구",
-                "time" : "08:05"
-            }
-        ],
-        "endInfo" : [
-            {
-                "station" : "아주대학교",
-                "time" : "08:50"
-            }
-        ],
         "fee" : {
             "ticket" : 1000,
             "cash" : 1200
         },
-        "carNumber": "일류투어 7998"
+        "carNumber": "일류투어 7998",
+        "stationInfo": {
+            "station" : "정자역 5번출구",
+            "endstation" : "아주대학교",
+            "info": [{
+                "round": 1,
+                "stationtime" : "08:05",
+                "endTime": "08:50"
+            }]
+        }
+    },
+    {
+        "station": "분당",
+        "stationId": 4,
+        "kind" : 0,
+        "fee" : {
+            "ticket" : 1000,
+            "cash" : 1200
+        },
+        "carNumber": "일류투어 7998",
+        "stationInfo": {
+            "station" : "미금역 7번출구",
+            "endstation" : "아주대학교",
+            "info": [{
+                "round": 1,
+                "stationtime" : "08:05",
+                "endTime": "08:50"
+            }]
+        }
     },
     {
         "station": "금정",
         "stationId": 5,
-        "round" : 1,
         "kind": 0,
-        "startInfo": [
-            {
-                "station": "금정역(금정농협 맞은편)",
-                "time": "07:50"
-            },
-            {
-                "station": "1번국도 범계사거리 버스정류장",
-                "time": "07:58"
-            },
-            {
-                "station": "고천육교 전 기아자동차 대리점 앞",
-                "time": "08:08"
-            }
-        ],
-        "endInfo": [
-            {
-                "station": "아주대학교",
-                "time": "08:50"
-            }
-        ],
         "fee" : {
             "ticket" : 1000,
             "cash" : 1200
         },
-        "carNumber": "아주대 9061"
+        "carNumber": "아주대 9061",
+        "stationInfo": {
+            "station": "금정역(금정농협 맞은편)",
+            "endstation": "아주대학교",
+            "info": [{
+                "round": 1,
+                "stationtime": "07:50",
+                "endTime": "08:50"
+            }]      
+        }
+    },
+    {
+        "station": "금정",
+        "stationId": 5,
+        "kind": 0,
+        "fee" : {
+            "ticket" : 1000,
+            "cash" : 1200
+        },
+        "carNumber": "아주대 9061",
+        "stationInfo": {
+            "station": "1번국도 범계사거리 버스정류장",
+            "endstation": "아주대학교",
+            "info": [{
+                "round": 1,
+                "stationtime": "07:58",
+                "endTime": "08:50"
+            }]      
+        }
+    },
+    {
+        "station": "금정",
+        "stationId": 5,
+        "kind": 0,
+        "fee" : {
+            "ticket" : 1000,
+            "cash" : 1200
+        },
+        "carNumber": "아주대 9061",
+        "stationInfo": {
+            "station": "고천육교 전 기아자동차 대리점 앞",
+            "endstation": "아주대학교",
+            "info": [{
+                "round": 1,
+                "stationtime": "08:08",
+                "endTime": "08:50"
+            }]      
+        }
     },
     {
         "station" : "안산",
         "stationId" : 6,
-        "round" : 1,
         "kind": 0,
-        "startInfo": [
-            {
-                "station": "안산역 롯데리아 앞 통근버스 승강장",
-                "time": "07:30"
-            },
-            {
-                "station": "중앙역앞 시내버스정류장",
-                "time": "07:37"
-            },
-            {
-                "station": "한대앞역 1번출구 앞",
-                "time": "07:42"
-            },
-            {
-                "station": "상록수역 길건너 통근버스 승강장",
-                "time": "07:47"
-            }
-        ],
-        "endInfo": [
-            {
-                "station": "아주대학교",
-                "time": "08:50"
-            }
-        ],
         "fee" : {
             "ticket" : 1000,
             "cash" : 1200
         },
-        "carNumber": "일류투어 9931"
+        "carNumber": "일류투어 9931",
+        "stationInfo": {
+            "station": "안산역 롯데리아 앞 통근버스 승강장",
+            "endstation": "아주대학교",
+            "info": [{
+                "round": 1,
+                "stationTime": "07:30",
+                "endTime": "08:50"
+            }]
+        }
+    },
+    {
+        "station" : "안산",
+        "stationId" : 6,
+        "kind": 0,
+        "fee" : {
+            "ticket" : 1000,
+            "cash" : 1200
+        },
+        "carNumber": "일류투어 9931",
+        "stationInfo": {
+            "station": "중앙역앞 시내버스정류장",
+            "endstation": "아주대학교",
+            "info": [{
+                "round": 1,
+                "stationTime": "07:37",
+                "endTime": "08:50"
+            }]
+        }
+    },
+    {
+        "station" : "안산",
+        "stationId" : 6,
+        "kind": 0,
+        "fee" : {
+            "ticket" : 1000,
+            "cash" : 1200
+        },
+        "carNumber": "일류투어 9931",
+        "stationInfo": {
+            "station": "한대앞역 1번출구 앞",
+            "endstation": "아주대학교",
+            "info": [{
+                "round": 1,
+                "stationTime": "07:42",
+                "endTime": "08:50"
+            }]
+        }
+    },
+    {
+        "station" : "안산",
+        "stationId" : 6,
+        "kind": 0,
+        "fee" : {
+            "ticket" : 1000,
+            "cash" : 1200
+        },
+        "carNumber": "일류투어 9931",
+        "stationInfo": {
+            "station": "상록수역 길건너 통근버스 승강장",
+            "endstation": "아주대학교",
+            "info": [{
+                "round": 1,
+                "stationTime": "07:47",
+                "endTime": "08:50"
+            }]
+        }
     },
     {
         "station": "수원역",
         "stationId" : 7,
-        "round" : 1,
         "kind": 0,
-        "startInfo": [{
+        "carNumber": "아주대 9062",
+        "stationInfo": {
             "station": "수원역 로터리 9번/10번 출구 사이 학생버스 승강장",
-            "time": "08:20"
-        },{
-            "station": "수원역 로터리 9번/10번 출구 사이 학생버스 승강장",
-            "time": "09:30"
-        },
-        {
-            "station": "수원역 로터리 9번/10번 출구 사이 학생버스 승강장",
-            "time": "11:30"
-        },
-        {
-            "station": "아주대학교 도서관",
-            "time": "15:00"
-        },
-        {
-            "station": "아주대학교 도서관",
-            "time": "17:00"
-        },
-        {
-            "station": "아주대학교 도서관",
-            "time": "18:10"
+            "endstation": "아주대학교 도서관",
+            "info": [{
+                "round": 1,
+                "stationTime": "08:20",
+                "endTime": "08:50"
+            },{
+
+            },{
+                "round": 2,
+                "stationTime": "09:30",
+                "endTime": "10:00"
+            },{
+                "round": 3,
+                "stationTime": "11:30",
+                "endTime": "12:00"
+            }]
         }
-        ],
-        "endInfo": [{
-            "station": "아주대학교",
-            "time": "08:50"
-        },
-        {
-            "station": "아주대학교",
-            "time": "10:00"
-        },
-        {
-            "station": "아주대학교",
-            "time": "12:00"
-        },
-        {
-            "station": "수원역 로터리 9번/10번 출구 사이 학생버스 승강장",
-            "time": "15:30"
-        },
-        {
-            "station": "수원역 로터리 9번/10번 출구 사이 학생버스 승강장",
-            "time": "17:30"
-        },
-        {
-            "station": "수원역 로터리 9번/10번 출구 사이 학생버스 승강장",
-            "time": "18:40"
-        }
-        ],
-        "carNumber": "아주대 9062"
     },
     {
-        "station" : "광교",
+        "station": "수원역",
+        "stationId" : 7,
+        "kind": 0,
+        "carNumber": "아주대 9062",
+        "stationInfo": {
+            "station": "아주대학교 도서관",
+            "endstation": "수원역 로터리 9번/10번 출구 사이 학생버스 승강장",
+            "info": [{
+                "round": 1,
+                "stationTime": "15:00",
+                "endTime": "15:30"
+            },{
+
+            },{
+                "round": 2,
+                "stationTime": "17:00",
+                "endTime": "17:35"
+            },{
+                "round": 3,
+                "stationTime": "18:10",
+                "endTime": "18:45"
+            }]
+        }
+    },
+    {
+        "station" : "학교->광교",
         "stationId" : 8,
-        "round" : 1,
-        "kind" : 1,
-        "startInfo" : [{
+        "kind" : 0,
+        "carNumber": "학교버스(아주대 9063)",
+        "stationInfo" : {
             "station" : "아주대 도서관 옆 버스정류장",
-            "time" : "08:20"
-        }],
-        "endInfo" : [{
-            "station" : "광교중앙역 1번 출구",
-            "time" : "08:30"
-        }],
-        "carNumber": "학교버스"
+            "endstation": "광교중앙역 1번 출구",
+            "info": [{
+                "round": 1,
+                "stationTime": "08:20",
+                "endTime": "08:30"
+            },
+            {
+                "round": 2,
+                "stationTime": "08:40",
+                "endTime": "08:50"
+            },
+            {
+                "round": 3,
+                "stationTime": "09:20",
+                "endTime": "09:30"
+            },
+            {
+                "round": 4,
+                "stationTime": "09:50",
+                "endTime": "10:00"
+            },
+            {
+                "round": 5,
+                "stationTime": "10:05",
+                "endTime": "10:15"
+            },
+            {
+                "round": 6,
+                "stationTime": "11:35",
+                "endTime": "11:45"
+            },
+            {
+                "round": 7,
+                "stationTime": "14:35",
+                "endTime": "14:45"
+            },
+            {
+                "round": 8,
+                "stationTime": "15:50",
+                "endTime": "16:00"
+            },
+            {
+                "round": 9,
+                "stationTime": "16:50",
+                "endTime": "17:00"
+            },
+            {
+                "round": 10,
+                "stationTime": "18:10",
+                "endTime": "18:20"
+            }
+        ]
+    } 
     },
     {
-        "station" : "광교",
+        "station" : "광교-> 학교",
         "stationId" : 9,
-        "round" : 1,
-        "kind" : 1,
-        "startInfo" : [{
+        "kind" : 0,
+        "carNumber": "학교버스(아주대 9063)",
+        "stationInfo" : {
             "station" : "광교중앙역 1번 출구",
-            "time" : "08:30"
-        }],
-        "endInfo" : [{
-            "station" : "아주대 도서관 옆 버스정류장",
-            "time" : "08:40"
-        }],
-        "carNumber": "학교버스"
+            "endstation": "아주대 도서관 옆 버스정류장",
+            "info": [{
+                "round": 1,
+                "stationTime": "08:30",
+                "endTime": "08:40"
+            },
+            {
+                "round": 2,
+                "stationTime": "08:50",
+                "endTime": "09:00"
+            },
+            {
+                "round": 3,
+                "stationTime": "09:30",
+                "endTime": "09:40"
+            },
+            {
+                "round": 4,
+                "stationTime": "10:00",
+                "endTime": "10:10"
+            },
+            {
+                "round": 5,
+                "stationTime": "10:15",
+                "endTime": "10:25"
+            },
+            {
+                "round": 6,
+                "stationTime": "11:45",
+                "endTime": "11:55"
+            },
+            {
+                "round": 7,
+                "stationTime": "14:45",
+                "endTime": "14:55"
+            },
+            {
+                "round": 8,
+                "stationTime": "16:00",
+                "endTime": "16:10"
+            },
+            {
+                "round": 9,
+                "stationTime": "17:00",
+                "endTime": "17:10"
+            }
+        ]
+    } 
     },
     {
-        "station" : "광교",
+        "station" : "수원역",
         "stationId" : 10,
-        "round" : 2,
         "kind" : 1,
-        "startInfo" : [{
-            "station" : "아주대 도서관 옆 버스정류장",
-            "time" : "08:40"
-        }],
-        "endInfo" : [{
-            "station" : "광교중앙역 1번 출구",
-            "time" : "08:50"
-        }],
-        "carNumber": "학교버스"
+        "carNumber": "학교버스",
+        "stationInfo" : {
+            "station" : "수원역 9번/10번 출구 사이 학생버스 승강장",
+            "endstation" : "아주대학교 도서관 옆 버스정류장",
+            "info": [
+                {
+                    "round": 1,
+                    "stationTime": "08:20",
+                    "endTime": "08:30"
+                }
+            ]
+        }
     },
     {
-        "station" : "광교",
+        "station" : "아주대->수원역",
         "stationId" : 11,
-        "round" : 2,
         "kind" : 1,
-        "startInfo" : [{
-            "station" : "광교중앙역 1번 출구",
-            "time" : "08:50"
-        }],
-        "endInfo" : [{
-            "station" : "아주대 도서관 옆 버스정류장",
-            "time" : "09:00"
-        }],
-        "carNumber": "학교버스"
+        "carNumber": "학교버스",
+        "stationInfo":{
+            "station": "아주대학교 도서관 옆 버스정류장",
+            "endstation": "수원역 9번/10번 출구 사이 학생버스 승강장",
+            "info": [
+                {
+                    "round": 1,
+                    "stationTime": "18:10",
+                    "endTime": "18:40"
+                }
+            ]
+        }
     },
     {
-        "station" : "광교",
-        "stationId" : 12,
-        "round" : 3,
-        "kind" : 1,
-        "startInfo" : [{
-            "station" : "아주대 도서관 옆 버스정류장",
-            "time" : "18:10"
-        }],
-        "endInfo" : [{
-            "station" : "광교중앙역 1번 출구",
-            "time" : "18:25"
-        }],
-        "carNumber": "학교버스"
+        "station": "아주대->광교중앙(아주대)역",
+        "stationId": 12,
+        "kind": 1,
+        "carNumber": "학교버스",
+        "stationInfo": {
+            "station": "아주대학교 도서관 옆 버스정류장",
+            "endstation": "광교중앙역 1번 출구",
+            "info": [
+                {
+                    "round": 1,
+                    "stationTime": "08:20",
+                    "endTime": "08:30"
+                },
+                {
+                    "round": 2,
+                    "stationTime": "08:40",
+                    "endTime": "08:50"
+                },
+                {
+                    "round": 3,
+                    "stationTime": "18:10",
+                    "endTime": "18:20"
+                }
+            ]
+        }
     },
     {
-        "station": "수원역",
+        "station": "광교중앙(아주대)역->아주대",
         "stationId": 13,
-        "round" : 1,
         "kind": 1,
-        "startInfo": [{
-            "station" : "수원역 로터리 9번/10번 출구 사이 학생버스 승강장",
-            "time": "08:20"
-        }],
-        "endInfo" : [{
-            "station" : "아주대 도서관 옆 버스정류장",
-            "time" : "08:50"
-        }],
-        "carNumber": "학교버스"
-    },
-    {
-        "station": "수원역",
-        "stationId": 14,
-        "round" : 1,
-        "kind": 1,
-        "startInfo": [{
-            "station" : "아주대 도서관 옆 버스정류장",
-            "time": "18:10"
-        }],
-        "endInfo" : [{
-            "station" : "수원역 로터리 9번/10번 출구 사이 학생버스 승강장",
-            "time" : "18:40"
-        }],
-        "carNumber": "학교버스"
+        "carNumber": "학교버스",
+        "stationInfo": {
+            "station": "광교중앙역 1번 출구",
+            "endstation": "아주대학교 도서관 옆 버스정류장",
+            "info": [
+                {
+                    "round": 1,
+                    "stationTime": "08:30",
+                    "endTime": "08:40"
+                },
+                {
+                    "round": 2,
+                    "stationTime": "08:50",
+                    "endTime": "09:00"
+                }
+            ]
+        }
     }
 ]
