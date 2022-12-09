@@ -22,6 +22,10 @@ const userSchema = new mongoose.Schema({
     level: { // 유저 권한 관리
         type: Number,
         required: true
+    },
+    sessionid: {
+        type: String,
+        required: false
     }
 },{timestamps: true}); //createdAt, updatedAt 생성
 

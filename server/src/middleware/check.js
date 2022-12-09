@@ -1,16 +1,18 @@
 const response = require("../../config/response");
-const check = require("../services/userService");
-exports.checkLogin = function(req,res,next){
-    if(!req.session.is_LoggedIn) return res.send(response.basicResponse(response.IS_NOT_LOGGEDIN));
+const session = require("../services/sessionService");
+const user = require("../services/userService");
+exports.checkLogin = async function(req,res,next){
+    let token = req.headers.token;
+    const result = await session.checkToken(token);
+    if(!result) return res.send(response.basicResponse(response.IS_NOT_LOGGEDIN));
     next();
 };
 
 exports.checkDriver = async function(req,res,next){
-    console.log(req.session);
-    if(!req.session.is_LoggedIn) return res.send(response.basicResponse(response.IS_NOT_LOGGEDIN));
-    const userid = req.session.loginData.id;
-    console.log(userid);
-    const driverFlag = await check.isDriver(userid);
+    let token = req.headers.token;
+    const result = await session.checkToken(token);
+    if(!result) return res.send(response.basicResponse(response.IS_NOT_LOGGEDIN));
+    const driverFlag = await user.isDriver(token);
     if(!driverFlag) return res.send(response.basicResponse(response.NOT_DRIVER));
     next();
 }

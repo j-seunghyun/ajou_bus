@@ -30,7 +30,7 @@ module.exports =  () => {
         }),
         saveUninitialized: false,
         cookie:{
-            expires: 60 * 60 * 3
+            expires: 60 * 60 * 12
         }
     }));
 

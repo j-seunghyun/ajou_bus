@@ -1,14 +1,13 @@
 const userService = require("../services/userService");
+const sessionService = require("../services/sessionService");
 const response = require("../../config/response");
 const { basicResponse, resultResponse, NOT_AJOU_EMAIL, DB_ERROR, AJOU_STUDENT, FALSE_TOKEN, SIGNUPSUCCESS } = require("../../config/response");
-
+const crypto = require('crypto');
 // request파라미터 여부확인 -> 에러처리 -> 비즈니스로직작성
 exports.signup = async function (req, res, err) {
 
         const { studentID, nickname, email, password} = req.body;
-        //console.log(studentID, "+", nickname, "+", email, "+", password);
         const isAjouEmail = userService.checkAjouEmail(email); //ajou email이면 true, 아니면 false
-        //console.log(isAjouEmail);
         if(!isAjouEmail) return res.send(basicResponse(NOT_AJOU_EMAIL));
         if(!studentID || !nickname || !email || !password) return res.send(basicResponse(response.USER_PARAMS_EMPTY));
         const userFlag = await userService.userCheck(studentID, nickname, email); // true면 중복 false면 진행
@@ -23,10 +22,12 @@ exports.signup = async function (req, res, err) {
 exports.signin = async function (req, res) {
         const { email, password} = req.body;
         const loginFlag = await userService.signin(email, password);  //return이 0이면 이메일이 db에 없거나 비번오류, userData오면 성공
+        console.log(loginFlag);
         if(loginFlag.result){
-            req.session.loginData = loginFlag.userData;
-            req.session.is_LoggedIn = true;
-            return res.send(basicResponse(response.loginSUCCESS));
+            req.session.save();
+            let token = req.session.id;
+            await userService.saveSession(loginFlag.userData.id,token);
+            return res.send(resultResponse(response.loginSUCCESS, {token, level:loginFlag.userData.level}));
         }else{
             return res.send(basicResponse({isSuccess: false, code: 400, message: loginFlag.msg}));
         }
