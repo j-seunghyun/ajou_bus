@@ -5,6 +5,7 @@ const crypto = require('crypto');
 const bcrypt = require('bcrypt');
 const nodemailer = require("nodemailer");
 const secret = require('../../config/secret');
+const { Session } = require("inspector");
 exports.userCheck = async function (studentID, nickname, email) {
     try {
         const userFlag = await User.findOne().or([{ studentID: studentID}, { nickname: nickname }, { email: email}]); //db에 이메일이나 학번 닉네임 중복확인
@@ -55,11 +56,10 @@ exports.signin = async function (email, password){
         const userInfo = await User.findOne({
             email: email
         }, { createdAt:0, updatedAt: 0, __v: 0});
-
         if(userInfo){
             const isEqualPw = await bcrypt.compare(password, userInfo.password);
             if(isEqualPw) {
-                let userData = {id: userInfo._id, email, nickname: userInfo.nickname, studentID: userInfo.studentID, station: userInfo.station, station: userInfo.level};
+                let userData = {id: userInfo._id, email, nickname: userInfo.nickname, studentID: userInfo.studentID, level: userInfo.level};
                 return {
                     result :1,
                     userData
@@ -171,4 +171,20 @@ exports.delete = async function(id){
         console.error(error);
         return 2;
     }
+};
+
+exports.saveSession= async function (id, token){
+    try{
+        await User.updateOne({
+            _id:id
+        }, {
+            sessionid:token
+        });
+    }catch{
+        console.error(error);
+    }
 }
+
+
+
+

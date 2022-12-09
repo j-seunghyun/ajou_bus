@@ -12,6 +12,7 @@ exports.posting = async function (req, res, err) {
 };
 
 exports.allNoticeInfo = async function (req, res) {
+    console.log(req.session);
     const data = await noticeService.getAllNotice();
     return res.send(resultResponse(response.SUCCESS, data));
 };
