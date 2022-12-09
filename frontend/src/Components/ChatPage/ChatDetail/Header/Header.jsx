@@ -9,7 +9,7 @@ export const Header = () => {
             <img alt="menu_button" src="assets/img/menubuttonimage.png" />
           </Link>
         </button>
-        <h1>학기 노선</h1>
+        <h1>아주 chat</h1>
         <div />
       </div>
     </div>
