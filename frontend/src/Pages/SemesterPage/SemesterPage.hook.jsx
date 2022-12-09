@@ -37,11 +37,11 @@ export const useGetSemesterStation = () => {
     axios
       .get("/api/station/semester")
       .then((res) => {
-        console.log(res);
-        setStations(res.data);
+        console.log(res.data.result);
+        setStations(res.data.result);
       })
       .catch((e) => setStations(dummy));
-  });
+  }, []);
 
   return stations;
 };
