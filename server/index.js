@@ -30,11 +30,11 @@ app.post('/api/chat', (req, res) => {
     const { userName, title } = req.body;
     roomInfo[roomIdx] = { title, users: [userName] };
     console.log("채팅방 개설 : ", title);
-    roomIdx++;
     res.send({
         isSuccess: true,
         code: 200,
-        message: "채팅방 개설 성공"
+        message: "채팅방 개설 성공",
+        roomId: roomIdx++
     });
 });
 
@@ -56,6 +56,8 @@ io.on('connection', (socket) => {
     // 채팅방 참여
     socket.on('join_room', async ({ userName, roomId }) => {
         socket.join(roomId);
+        console.log("현재 채팅방: ", roomInfo);
+        console.log("roomId : ", roomId);
         roomInfo[roomId].users.push(userName);
         userRoom[userName] = roomId;
         console.log(`${userName} 채팅방 ${roomId} 참여`);
@@ -65,6 +67,7 @@ io.on('connection', (socket) => {
     // 채팅방에 client 채팅 요청
     socket.on('req_room_msg', async({userName, msg}) => {
         // room 확인
+        console.log("userName : ", userName);
         const roomId = userRoom[userName];
         console.log("current Room : ", roomId);
         io.to(roomId).emit('room_msg', { userName, msg });
