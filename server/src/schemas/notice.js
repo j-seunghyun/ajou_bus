@@ -10,8 +10,8 @@ const noticeSchema = new mongoose.Schema({
         required: true
     },
     category: {
-        type: Number,
-        ref: 'Station' // station 외래키 지정
+        type: String,
+        required: true
     },
     noticeId : {
         type: Number,

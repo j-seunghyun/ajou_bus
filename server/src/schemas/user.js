@@ -19,10 +19,6 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    station: { // 자주 타는 노선 
-        type: Number,
-        required: true
-    },
     level: { // 유저 권한 관리
         type: Number,
         required: true

@@ -34,5 +34,11 @@ module.exports = {
     NOTICE_PARAMS_EMPTY: { isSuccess:false, code:400, message:"공지사항 데이터 누락"},
     CREATE_NOTICE: { isSuccess: false, code: 200, message: "공지사항 등록 완료!"},
     IS_NOT_LOGGEDIN : { isSuccess:false, code: 400, message: "로그인이 되어있지 않습니다."},
-    NOTICE_NONE : { isSuccess:false, code: 404, message: "해당번호의 공지사항이 없습니다."}
+    NOTICE_NONE : { isSuccess:false, code: 404, message: "해당번호의 공지사항이 없습니다."},
+    NOT_DRIVER : { isSuccess: false, code: 403, message: "글쓰기 권한이 없습니다."},
+    MODIFY_SUCCESS: { isSuccess: true, code: 200, message: "글을 수정하였습니다."},
+    DELETE_SUCCESS: { isSuccess: true, code: 200, message: "글을 삭제하였습니다."},
+    NO_USER: { isSuccess: false, code: 400, message: "회원을 찾을 수 없습니다."},
+    DELETE_USER : { isSuccess: true, code: 200, message: "회원을 삭제하였습니다."},
+    TOKEN_EXPIRED: {isSuccess:false, code:400, message: "인증번호 시간이 만료되었습니다."}
 };

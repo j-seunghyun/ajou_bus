@@ -55,12 +55,12 @@ exports.signin = async function (email, password){
         }
         const userInfo = await User.findOne({
             email: email
-        });
-       //console.log(userInfo);
-        if(userInfo){ //이메일에 해당하는 유저가 있음
+        }, { createdAt:0, updatedAt: 0, __v: 0});
+
+        if(userInfo){
             const isEqualPw = await bcrypt.compare(password, userInfo.password);
             if(isEqualPw) {
-                let userData = { email, nickname: userInfo.nickname, studentID: userInfo.studentID, station: userInfo.station, station: userInfo.level};
+                let userData = {id: userInfo._id, email, nickname: userInfo.nickname, studentID: userInfo.studentID, station: userInfo.station, station: userInfo.level};
                 return {
                     result :1,
                     userData
@@ -114,6 +114,12 @@ exports.sendAjouEmail = async function(email){
             email,
             token
         });
+        setTimeout(function(){
+            Auth.deleteOne({
+                email,
+                token
+            });
+        }, 1000* 60* 5);  //인증번호 5분후 삭제
         if(authFlag) return true;
         else return false;
     }catch(error){
@@ -127,13 +133,41 @@ exports.checkToken = async function(email, token){
         const authInfo = await Auth.findOne({
             email: email
         });
+        if(!authInfo){
+            return 3;
+        }
         if(authInfo.token === token){
-            await Auth.remove({
+            await Auth.deleteOne({
                 email: email
             }); 
             return 0;
         }
         else return 1;
+    }catch(error){
+        console.error(error);
+        return 2;
+    }
+};
+
+exports.isDriver = async function(id){
+    try{
+        const driverFlag = await User.findOne({
+            _id: id, level: 1
+        });
+        if(driverFlag == null) return false;
+        return true;
+    }catch(error){
+        console.error(error);
+    }
+};
+
+exports.delete = async function(id){
+    try{
+        const deleteFlag = await User.deleteOne({
+            _id: id
+        });
+        if(deleteFlag == null) return 1;
+        return 0;
     }catch(error){
         console.error(error);
         return 2;
