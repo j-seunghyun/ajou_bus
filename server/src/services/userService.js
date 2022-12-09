@@ -151,7 +151,7 @@ exports.checkToken = async function(email, token){
 exports.isDriver = async function(id){
     try{
         const driverFlag = await User.findOne({
-            _id: id, level: 1
+            sessionid: id, level: 1
         });
         if(driverFlag == null) return false;
         return true;
