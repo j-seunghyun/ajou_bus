@@ -4,7 +4,7 @@ const { basicResponse, resultResponse } = require("../../config/response");
 
 exports.getAllNotice = async function() {
     try {
-        const data = await await Notice.find({});
+        const data = await Notice.find({});
         return data;
     } catch(error) {
         console.error(error);
@@ -35,9 +35,40 @@ exports.checkParam = async function(title, context, category){
 };
 
 exports.postNotice = async function(title, context, category){
-    const flag = await Notice.create({
-        title,
-        context,
-        category
-    });
+    try{
+        const flag = await Notice.create({
+            title,
+            context,
+            category
+        });
+        return true;
+    }catch(error){
+        console.error(error);
+        return false;
+    }
+};
+
+
+exports.modify =  async function(id, title, context, category){
+    try{
+        await Notice.updateOne(
+            {_id : id},{title, context, category}
+        );
+        return true;
+    }catch(error){
+        console.error(error);
+        return false;
+    }
+};
+
+exports.delete = async function(noticeId){
+    try{
+        await Notice.deleteOne({
+            _id: noticeId
+        });
+        return true;
+    }catch(error){
+        console.error(error);
+        return false;
+    }
 }
