@@ -3,9 +3,8 @@ const Session = require('../schemas/session');
 
 exports.checkToken = async function(token){
     try{
-        const session = await Session.findOne({
-            _id : token
-        });
+        // console.log(token);
+        const session = await Session.findById(token);
         return session;
     }catch(error){
         console.error(error)
