@@ -10,7 +10,7 @@ export const useGetNoticeInfo = (id) => {
     axios
       .get(`/api/notice/${id}`)
       .then((res) => {
-        const info = res.data.result;
+        const [info] = res.data.result;
         setNoticeInfo(info);
         setLoading(false);
       })
