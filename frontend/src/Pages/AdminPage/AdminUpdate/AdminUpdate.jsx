@@ -1,4 +1,3 @@
-import axios from "../../../Util/axios";
 import { useParams } from "react-router-dom";
 import { useGetNoticeInfo } from "./AdminUpdate.hook";
 
