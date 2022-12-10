@@ -16,7 +16,7 @@ const CATEGORY_LIST = [
   {
     src: "/assets/img/noticebutton.png",
     title: "공지사항",
-    route: "/notice",
+    route: "/",
   },
   {
     src: "/assets/img/infobutton.png",

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { timeToString } from "../../../Util/TimeParser";
 import { useGetNotice } from "./NoticeItem.hook";
 
 export const NoticeItem = ({ category }) => {
@@ -15,7 +16,9 @@ export const NoticeItem = ({ category }) => {
                 <p id="main_notice_context">{notice.title}</p>
               </div>
               <div id="main_notice_second">
-                <p id="main_notice_category">[{notice.category}]</p>
+                <p id="main_notice_category">
+                  [{notice.category} : {timeToString(notice.updatedAt)}]
+                </p>
               </div>
             </Link>
           </li>

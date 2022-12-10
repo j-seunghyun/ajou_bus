@@ -8,9 +8,7 @@ export const Header = () => {
           <img alt="menu_button" src="assets/img/menubuttonimage.png" />
         </Link>
         <h1>아주 chat</h1>
-        <button id="head_login_button">
-          <img alt="login_button" src="assets/img/user.png" />
-        </button>
+        <div />
       </div>
     </div>
   );

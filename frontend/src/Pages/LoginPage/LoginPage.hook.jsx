@@ -1,5 +1,6 @@
 import axios from "../../Util/axios";
 import { useState } from "react";
+import { setCookie, setLevel, setUserId } from "../../Util/LocalStorage";
 
 export const useLogin = () => {
   const [state, setState] = useState({
@@ -16,8 +17,12 @@ export const useLogin = () => {
   };
 
   const postLogin = (navigate) => () => {
-    axios.post("/api/signin", state).then((res) => {
-      console.log(res);
+    axios.post("/api/login", state).then((res) => {
+      console.log(res.data);
+      if (res.data.code !== 200) return;
+      setCookie(res.data.result.token);
+      setLevel(res.data.result.level);
+      setUserId(state.email);
       navigate("/");
     });
   };

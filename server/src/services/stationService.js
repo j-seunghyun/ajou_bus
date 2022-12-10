@@ -3,7 +3,7 @@ const Station = require('../schemas/station');
 
 exports.getSemester = async function(){
     try{
-        const data = await Station.find({ kind : 0}); //학기 노선 정보 찾기
+        const data = await Station.find({ kind : 0 }); //학기 노선 정보 찾기
         return data;
     }catch(error){
         console.error(error);

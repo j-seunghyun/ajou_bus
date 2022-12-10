@@ -25,8 +25,8 @@ module.exports =  () => {
         secret: secret.sessionKey.secret,
         resave: false,
         store: MongoStore.create({
-            mongoUrl: secret.db.atlas
-            ,dbName: 'ajou_bus'
+            mongoUrl: secret.db.atlas,
+            dbName: 'ajou_bus'
         }),
         saveUninitialized: false,
         cookie:{
