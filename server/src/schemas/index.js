@@ -3,6 +3,7 @@ const AutoIncrementFactory = require('mongoose-sequence');
 const secret = require('../../config/secret');
 const station = require('./station');
 const auth = require('./auth');
+const session = require('./session');
 /*const autoIncrement = require('mongoose-auto-increment');
 autoIncrement.initialize(mongoose.connection);
 const station = require('./station');

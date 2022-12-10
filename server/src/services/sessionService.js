@@ -1,10 +1,9 @@
 const response = require("../../config/response");
 const Session = require('../schemas/session');
-
 exports.checkToken = async function(token){
     try{
-        const session = await Session.findOne({
-            _id : token
+        const session = await Session.findById({
+            token
         });
         return session;
     }catch(error){

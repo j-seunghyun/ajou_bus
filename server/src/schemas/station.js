@@ -8,7 +8,7 @@ const stationSchema = new mongoose.Schema({
         required: true
     },
     kind:{
-        type: Boolean,  //0이면 학기 노선, 1이면 방학 노선
+        type: Number,  //0이면 학기 노선, 1이면 방학 노선
         required: true
     },
     stationId: {
