@@ -26,11 +26,8 @@ exports.noticeInfo = async function (req, res) {
 
 exports.modify = async function(req, res){
     const noticeId = req.params.noticeId;
-    const {title, content, category} = req.body;
-    const userData = req.session.loginData;
-    const checkUser = await userService.isDriver(userData.id);
-    if(!checkUser) return res.send(basicResponse(response.NOT_DRIVER));
-    const result = await noticeService.modify(noticeId, title, content, category);
+    const {title, context, category} = req.body;
+    const result = await noticeService.modify(noticeId, title, context, category);
     if(!result) return res.send(basicResponse(response.DB_ERROR));
     return res.send(basicResponse(response.MODIFY_SUCCESS));
 };

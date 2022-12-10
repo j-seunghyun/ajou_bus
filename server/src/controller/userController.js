@@ -2,8 +2,6 @@ const userService = require("../services/userService");
 const sessionService = require("../services/sessionService");
 const response = require("../../config/response");
 const { basicResponse, resultResponse, NOT_AJOU_EMAIL, DB_ERROR, AJOU_STUDENT, FALSE_TOKEN, SIGNUPSUCCESS } = require("../../config/response");
-const crypto = require('crypto');
-// request파라미터 여부확인 -> 에러처리 -> 비즈니스로직작성
 exports.signup = async function (req, res, err) {
 
         const { studentID, nickname, email, password} = req.body;
@@ -22,7 +20,6 @@ exports.signup = async function (req, res, err) {
 exports.signin = async function (req, res) {
         const { email, password} = req.body;
         const loginFlag = await userService.signin(email, password);  //return이 0이면 이메일이 db에 없거나 비번오류, userData오면 성공
-        console.log(loginFlag);
         if(loginFlag.result){
             req.session.save();
             let token = req.session.id;
