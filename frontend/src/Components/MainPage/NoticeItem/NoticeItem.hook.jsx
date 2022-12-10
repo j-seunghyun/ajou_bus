@@ -5,11 +5,16 @@ import axios from "../../../Util/axios";
 export const useGetNotice = ({ category }) => {
   const [allNoticeList, setAllNoticeList] = useState([]);
   const [noticeList, setNoticeList] = useState([]);
-  useEffect(() => {
+  const [refetch, setRefetch] = useState(0);
+
+  const fetchData = () => {
     axios
       .get("/api/notice")
       .then((res) => res.data.result)
       .then(setAllNoticeList);
+  };
+  useEffect(() => {
+    fetchData();
   }, []);
 
   useEffect(() => {
@@ -22,5 +27,9 @@ export const useGetNotice = ({ category }) => {
       );
   }, [category, allNoticeList]);
 
-  return noticeList;
+  useEffect(() => {
+    fetchData();
+  }, [refetch]);
+
+  return { noticeList, setRefetch };
 };

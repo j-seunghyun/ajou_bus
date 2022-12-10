@@ -24,7 +24,10 @@ export const useHandleNotice = ({ _title, _context }) => {
         ...noticeState,
         category,
       })
-      .then(console.log);
+      .then((res) => {
+        if (res.data.code !== 200) return;
+        navigate("/admin");
+      });
   };
 
   const handleNoticeUpdate = (id) => () => {
@@ -33,7 +36,10 @@ export const useHandleNotice = ({ _title, _context }) => {
         ...noticeState,
         category,
       })
-      .then(console.log);
+      .then((res) => {
+        if (res.data.code !== 200) return;
+        navigate("/admin");
+      });
   };
 
   useEffect(() => {

@@ -4,9 +4,12 @@ import { timeToString } from "../../../Util/TimeParser";
 import { useGetNotice } from "../../MainPage/NoticeItem/NoticeItem.hook";
 
 const AdminNotice = ({ category }) => {
-  const noticeList = useGetNotice({ category });
+  const { noticeList, setRefetch } = useGetNotice({ category });
   const handleDeleteNotice = (id) => () => {
-    axios.delete(`/api/notice/${id}`).then(console.log);
+    axios.delete(`/api/notice/${id}`).then((res) => {
+      if (res.data.code !== 200) return;
+      setRefetch((prev) => prev + 1);
+    });
   };
   return (
     <ul>
