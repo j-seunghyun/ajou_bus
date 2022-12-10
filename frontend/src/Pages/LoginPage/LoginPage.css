@@ -1,5 +1,4 @@
 #login_main_page_title {
-  position: relative;
   text-align: center;
 
   font-family: "Nunito Sans";
@@ -7,7 +6,6 @@
   font-weight: 700;
   font-size: 26px;
   line-height: 32px;
-  /* identical to box height, or 123% */
 }
 
 #login_main_body_frame {
@@ -36,8 +34,8 @@
   flex-grow: 0;
 }
 #login_google_frame {
-  position: relative;
-  top: 15px;
+  /* position: relative;
+  top: 15px; */
 }
 
 #login_with_google_button {

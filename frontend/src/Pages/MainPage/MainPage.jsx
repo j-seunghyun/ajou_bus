@@ -1,9 +1,4 @@
-import {
-  Category,
-  Footer,
-  Header,
-  NoticeItem,
-} from "../../Components/MainPage";
+import { Category, Header, NoticeItem } from "../../Components/MainPage";
 import "./MainPage.css";
 import { useSelectCategory } from "./MainPage.hook";
 
@@ -14,7 +9,6 @@ export const MainPage = () => {
       <Header />
       <Category handleSelectCategory={handleSelectCategory} />
       <NoticeItem category={category} />
-      <Footer />
     </div>
   );
 };

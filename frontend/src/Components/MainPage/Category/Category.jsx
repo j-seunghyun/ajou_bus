@@ -35,12 +35,6 @@ const CATEGORY_LIST = [
 export const Category = ({ handleSelectCategory }) => {
   return (
     <>
-      <div id="notice_category_nav_frame">
-        <div id="notice_category_nav_rect">
-          <p>전체</p>
-          <button id="notice_nav_button">∨</button>
-        </div>
-      </div>
       <div id="notice_button_scroll_frame">
         {CATEGORY_LIST.map((category) => (
           <button

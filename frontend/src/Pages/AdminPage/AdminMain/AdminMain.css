@@ -1,377 +1,249 @@
-#notice_head{
-    /* 아주 교통 관리자 페이지 */
+#notice_head {
+  /* 아주 교통 관리자 페이지 */
+  text-align: center;
 
-
-    position: relative;
-    text-align: center;
-
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 50px;
-    line-height: 32px;
-    /* identical to box height, or 64% */
-
-
-    color: #000000;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 32px;
+  color: #000000;
 }
 
-#notice{
-    /* 공지사항 */
-    text-align: center;
+#notice {
+  /* 공지사항 */
+  text-align: center;
 
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 50px;
-    line-height: 68px;
-
-    color: #000000;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 68px;
+  color: #000000;
 }
 
-#notice_menu_button_div{
-    /* 드롭다운 프레임 */
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-
-    position: relative;
-
-    left: 0%;
-    right: 0%;
-    top: 23.1%;
-    bottom: 71.98%;
-
+#notice_menu_button_div {
+  /* 드롭다운 프레임 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#menu_div{
-    /* Frame 515 */
+#menu_div {
+  box-sizing: border-box;
 
-    box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  width: 100vw;
+  height: 36px;
 
-    /* Auto layout */
+  background: #ffffff;
+  border: 2px solid #afb1b6;
+  border-radius: 8px;
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 10px 12px;
-
-    width: 343px;
-    height: 36px;
-
-    /* white */
-
-    background: #FFFFFF;
-    /* subtle-2 */
-
-    border: 2px solid #AFB1B6;
-    border-radius: 8px;
-
-    /* Inside auto layout */
-
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
 }
 
-#dropdown_text{
-    /* 전체 */
+#dropdown_text {
+  width: 100vw;
+  height: 20px;
 
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.4px;
 
-    width: 287px;
-    height: 20px;
+  color: #61646b;
 
-    /* label medium */
-
-    font-family: 'Noto Sans KR';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
-    /* identical to box height, or 143% */
-
-    letter-spacing: 0.4px;
-
-    /* subtle-1 */
-
-    color: #61646B;
-
-
-    /* Inside auto layout */
-
-    flex: none;
-    order: 0;
-    flex-grow: 1;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
 }
 
-#dropdown_button{
-    /* Arrow - Down 2 */
-    /* Inside auto layout */
-
-    box-sizing: border-box;
-
-    /* subtle-1 */
-
-    flex: none;
-    flex-grow: 0;
+#dropdown_button {
+  box-sizing: border-box;
+  flex: none;
+  flex-grow: 0;
 }
-#button_div{
+#button_div {
+  display: flex;
+  align-items: center;
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    position: relative;
-    height: 30px;
-
+  height: 30px;
 }
 
-#select{
-    /* validation button
+#select {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  margin: 5px;
 
-Atom of All Buttons
-*/
+  background: #7f265b;
+  border-radius: 4px;
 
-    /* Auto layout */
+  height: 19px;
 
-    /* Auto layout */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 10px 16px;
-    margin: 5px;
+  color: #ffffff;
 
-    position: relative;
-
-    background: #7F265B;
-    border-radius: 4px;
-
-    height: 19px;
-
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-
-    /* /Gray / White */
-
-    color: #FFFFFF;
-    /* Inside auto layout */
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
 
-#modify{
-    /* validation button
+#modify {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
 
-Atom of All Buttons
-*/
+  margin: 5px;
 
-    /* Auto layout */
+  background: #7f265b;
+  border-radius: 4px;
+  height: 19px;
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 10px 16px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
 
-    position: relative;
-    margin: 5px;
-
-    background: #7F265B;
-    border-radius: 4px;
-    /* Success */
-
-    height: 19px;
-
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-
-    /* /Gray / White */
-
-    color: #FFFFFF;
-
-
-    /* Inside auto layout */
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+  color: #ffffff;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
 
-#create{
-    /* validation button
+#create {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
 
-Atom of All Buttons
-*/
+  margin: 5px;
 
-    /* Auto layout */
+  background: #7f265b;
+  border-radius: 4px;
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 10px 16px;
+  height: 19px;
 
-    position: relative;
-    margin: 5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
 
-    background: #7F265B;
-    border-radius: 4px;
-
-    height: 19px;
-
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-
-    /* /Gray / White */
-
-    color: #FFFFFF;
-
-
-    /* Inside auto layout */
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+  color: #ffffff;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
 
-#delete{
-    /* validation button
+#delete {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
 
-Atom of All Buttons
-*/
+  margin: 5px;
 
-    /* Auto layout */
+  background: #7f265b;
+  border-radius: 4px;
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 10px 16px;
+  height: 19px;
 
-    position: relative;
-    margin: 5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
 
-    background: #7F265B;
-    border-radius: 4px;
-
-    /* Success */
-
-    height: 19px;
-
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-
-    /* /Gray / White */
-
-    color: #FFFFFF;
-
-
-    /* Inside auto layout */
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+  color: #ffffff;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
-#notices_div{
-    /* Frame 690 */
-    position: relative;
-    display:flex;
-    height: 800px;
-    left: 0px;
-    top: 30px;
-    align-items: center;
-    justify-content: center;
+#notices_div {
+  display: flex;
+  height: 800px;
+  align-items: center;
+  justify-content: center;
 }
 
-#notices_frame{
+#notices_frame {
+  width: 954px;
+  width: 100vw;
+  height: 621px;
 
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  padding: 20px;
 
-    width: 954px;
-    height: 621px;
-
-    display:flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    padding:20px;
-
-
-    background: #FFFFFF;
-    border: 3px solid #AFB1B6;
-    border-radius: 30px;
+  background: #ffffff;
+  border: 3px solid #afb1b6;
+  border-radius: 30px;
 }
 
-#notice_frame{
-    position: relative;
-    width: 828px;
-    height: 58px;
-    display:flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+#notice_frame {
+  width: 828px;
+  width: 100vw;
+  height: 58px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 
-    background: #FFFFFF;
-    border-width: 1px 0px;
-    border-style: solid;
-    border-color: #AFB1B6;
+  background: #ffffff;
+  border-width: 1px 0px;
+  border-style: solid;
+  border-color: #afb1b6;
 }
 
-#notice_category{
-    position:relative;
-    left: 1.81%;
-    right: 10%;
+#notice_category {
+  /* position: relative;
+  left: 1.81%;
+  right: 10%; */
 }
 
-#notice_content{
-    position:relative;
-    left: 15%;
+#notice_content {
+  /* position: relative;
+  left: 15%; */
 }
-#notice_date{
-    position:relative;
-    left: 50%;
-}
-
-#button_div{
-    /* PageNumberFrame */
-    position: relative;
-    bottom: 10.17%;
-
-    display:flex;
-    flex-display: row;
-    justify-content: center;
-    gap: 5px;
+#notice_date {
+  /* position: relative;
+  left: 50%; */
 }
 
-.button_style{
-    /* Frame 678 */
-
-
-    width: 22px;
-    height: 22px;
-
-    /* Inside auto layout */
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+#button_div {
+  /* PageNumberFrame */
+  display: flex;
+  justify-content: center;
+  gap: 5px;
 }
 
+.button_style {
+  /* Frame 678 */
+
+  width: 22px;
+  height: 22px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}

@@ -1,246 +1,179 @@
-#notice_head{
-    /* 아주 교통 관리자 페이지 */
+#notice_head {
+  /* 아주 교통 관리자 페이지 */
+  text-align: center;
+  top: 10px;
 
-
-    position: relative;
-    text-align: center;
-    top:10px;
-
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 50px;
-    line-height: 32px;
-    /* identical to box height, or 64% */
-
-
-    color: #000000;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 32px;
+  color: #000000;
 }
 
-#notice{
-    /* 공지사항 */
-    position: relative;
-    text-align: center;
+#notice {
+  /* 공지사항 */
+  text-align: center;
 
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 50px;
-    line-height: 68px;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 68px;
 
-    color: #000000;
+  color: #000000;
 }
 
-#notice_categories_frame{
-    /* Frame 694 */
-    width:343px;
-    height:197px;
+#notice_categories_frame {
+  width: 100vw;
+  height: 197px;
 
-    position: relative;
-    left: 31.46%;
-    right: 44.72%;
-    top: 23.28%;
-    bottom: 59.74%;
-
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-#notice_category{
-    position: relative;
-    left:0px;
+#notice_category {
+  left: 0px;
 
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
 
-    color: #000000;
-
+  color: #000000;
 }
 
-#notice_category_dropdown{
-    box-sizing: border-box;
+#notice_category_dropdown {
+  box-sizing: border-box;
 
-    /* Auto layout */
-    width: 343px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    padding: 10px 12px;
-    gap: 16px;
+  width: 100vw;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  gap: 16px;
 
-    position: relative;
+  background: #ffffff;
 
-    /* white */
-
-    background: #FFFFFF;
-    /* subtle-2 */
-
-    border: 2px solid #AFB1B6;
-    border-radius: 8px;
+  border: 2px solid #afb1b6;
+  border-radius: 8px;
 }
 
-#notice_category_dropdown_button{
-    position:relative;
-    left: 240px;
+#notice_category_dropdown_button {
+  /* position: relative;
+  left: 240px; */
 }
 
-#notice_route{
-    /* 공지사항 노선 설정 */
-    position: relative;
-    left: 0px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
+#notice_route {
+  /* 공지사항 노선 설정 */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
 
-    color: #000000;
+  color: #000000;
 }
 
-#notice_route_dropdown{
-    box-sizing: border-box;
+#notice_route_dropdown {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 36px;
 
-    /* Auto layout */
-    width: 343px;
-    height: 36px;
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  gap: 16px;
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 10px 12px;
-    gap: 16px;
+  background: #ffffff;
 
-    position: relative;
-
-    /* white */
-
-    background: #FFFFFF;
-    /* subtle-2 */
-
-    border: 2px solid #AFB1B6;
-    border-radius: 8px;
+  border: 2px solid #afb1b6;
+  border-radius: 8px;
 }
 
-#notice_route_dropdown_button{
-    position: relative;
-    left: 240px;
+#notice_route_dropdown_button {
+  /* position: relative;
+  left: 240px; */
 }
 
-#notice_inputfields_frame{
-    /* Frame 695 */
+#notice_inputfields_frame {
+  width: 588px;
+  width: 100vw;
+  height: 450px;
 
-    width: 588px;
-    height: 450px;
-    position: relative;
-    left: 31.46%;
-    right: 27.71%;
-    top: 43.71%;
-    bottom: 17.5%;
-
-    display:flex;
-    flex-direction: column;
-
+  display: flex;
+  flex-direction: column;
 }
 
-#notice_name{
-    /* 공지사항 이름 */
+#notice_name {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
 
-
-    position: relative;
-
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
-
-    color: #000000;
+  color: #000000;
 }
 
-#notice_name_field{
-    box-sizing: border-box;
+#notice_name_field {
+  box-sizing: border-box;
 
-    width:588px;
-    height: 50px;
+  width: 588px;
+  width: 100vw;
+  height: 50px;
 
-    position: relative;
-
-    background: #FFFFFF;
-    border: 3px solid #AFB1B6;
-    border-radius: 8px;
+  background: #ffffff;
+  border: 3px solid #afb1b6;
+  border-radius: 8px;
 }
 
-#notice_content{
-    position: relative;
-    left:0px;
-
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
-    color: #000000;
+#notice_content {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
 }
 
-#notice_content_field_div{
-    position: relative;
-    left: 0%;
-    right: 0%;
-    top: 57.24%;
-    bottom: 17.5%;
-
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
+#notice_content_field_div {
+  display: flex;
+  justify-content: center;
 }
 
-#notice_content_field{
-    box-sizing: border-box;
+#notice_content_field {
+  box-sizing: border-box;
 
-    position: relative;
-
-    width: 588px;
-    height:293px;
-    background: #FFFFFF;
-    border: 3px solid #AFB1B6;
-    border-radius: 8px;
+  width: 588px;
+  width: 100vw;
+  height: 293px;
+  background: #ffffff;
+  border: 3px solid #afb1b6;
+  border-radius: 8px;
 }
 
-#notice_register_button_div{
-    position: relative;
-    top: 20px;
-
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
+#notice_register_button_div {
+  display: flex;
+  justify-content: center;
 }
 
-#notice_register_button{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 13px 10px 12px;
-    gap: 13px;
+#notice_register_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 10px 12px;
+  gap: 13px;
 
-    position: relative;
+  background: #7f265b;
+  border-radius: 6px;
 
-    background: #7F265B;
-    border-radius: 6px;
+  height: 25px;
 
-    height: 25px;
-
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 25px;
-    /* identical to box height */
-
-
-    color: #FFFFFF;
-
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 25px;
+  color: #ffffff;
 }
