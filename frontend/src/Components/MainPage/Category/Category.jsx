@@ -1,4 +1,4 @@
-const CATEGORY_LIST = [
+export const CATEGORY_LIST = [
   {
     id: 1,
     title: "전체",

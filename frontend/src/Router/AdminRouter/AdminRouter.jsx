@@ -17,7 +17,7 @@ export const AdminRouter = () => {
         element={<AdminPrivateRouter Component={AdminCreate} />}
       />
       <Route
-        path="/update"
+        path="/update/:id"
         element={<AdminPrivateRouter Component={AdminUpdate} />}
       />
     </Routes>
