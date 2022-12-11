@@ -14,6 +14,7 @@ export const Modal = ({ handleModalToggle }) => {
       if (res.data.code !== 200) return;
       handleModalToggle();
       const roomId = res.data.roomId;
+      localStorage.setItem("title", title);
       navigate(`/chat/${roomId}`);
     });
   };

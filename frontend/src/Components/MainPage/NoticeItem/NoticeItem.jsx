@@ -17,7 +17,7 @@ export const NoticeItem = ({ category }) => {
               </div>
               <div id="main_notice_second">
                 <p id="main_notice_category">
-                  [{notice.category} : {timeToString(notice.updatedAt)}]
+                  [{notice.category} : {timeToString(notice?.updatedAt)}]
                 </p>
               </div>
             </Link>
