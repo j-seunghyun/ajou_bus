@@ -31,15 +31,13 @@ exports.signin = async function (req, res) {
 };
 
 exports.logout = async function (req, res, next){
-    let session = req.session;
-        if(session.loginData){
-            await session.destroy(function(err){
-                if(err) console.error(err);
-                else{
-                    return res.send('로그아웃 성공');
-                }
-            })
+    let token = req.headers.token;
+        if(token){
+            await sessionService.destroy();
+            return res.send(basicResponse({isSuccess: true, code: 200, message:"로그아웃 완료"}));
         }
+        return res.send(basicResponse(IS_NOT_LOGGEDIN));
+    
 };
 
 exports.sendEmail = async function(req, res){
