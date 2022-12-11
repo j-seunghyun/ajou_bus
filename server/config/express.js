@@ -28,10 +28,7 @@ module.exports =  () => {
             mongoUrl: secret.db.atlas,
             dbName: 'ajou_bus'
         }),
-        saveUninitialized: false,
-        cookie:{
-            expires: 1000* 60 * 60 * 12
-        }
+        saveUninitialized: false
     }));
 
     app.get('/', (req, res) => {
