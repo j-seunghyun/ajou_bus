@@ -3,8 +3,7 @@ const session = require("../services/sessionService");
 const user = require("../services/userService");
 
 exports.checkLogin = async function(req,res,next){
-    let token =  "asdasdasdasdasdasasdasd";
-    console.log(token, typeof(token));
+    let token =  "req.headers.token";
     const result = await session.checkToken(token);
     if(!result) return res.send(response.basicResponse(response.IS_NOT_LOGGEDIN));
     next();
