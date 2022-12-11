@@ -1,7 +1,7 @@
 import io from "socket.io-client";
 
 const SERVER_URL =
-  "http://ec2-43-201-20-174.ap-northeast-2.compute.amazonaws.com";
+  "http://ec2-43-200-4-177.ap-northeast-2.compute.amazonaws.com";
 const PORT = "4000";
 
 export default class ClientSocket {
