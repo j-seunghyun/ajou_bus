@@ -7,5 +7,5 @@ router.get("/api/notice", notice.allNoticeInfo);
 router.get("/api/notice/:noticeId", notice.noticeInfo);
 router.post("/api/notice", check.checkDriver, notice.posting);
 router.put("/api/notice/:noticeId", check.checkDriver, notice.modify);
-router.delete("/api/notice/:notcieId", check.checkDriver, notice.deleteNotice);
+router.delete("/api/notice/:noticeId", check.checkDriver, notice.deleteNotice);
 module.exports = router;
