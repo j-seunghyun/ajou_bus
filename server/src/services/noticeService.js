@@ -52,7 +52,7 @@ exports.postNotice = async function(title, context, category){
 exports.modify =  async function(id, title, context, category){
     try{
         await Notice.updateOne(
-            {_id : id},{title, context, category}
+            {noticeId : id},{title, context, category}
         );
         return true;
     }catch(error){
@@ -64,7 +64,7 @@ exports.modify =  async function(id, title, context, category){
 exports.delete = async function(noticeId){
     try{
         await Notice.deleteOne({
-            _id: noticeId
+            noticeId: noticeId
         });
         return true;
     }catch(error){
