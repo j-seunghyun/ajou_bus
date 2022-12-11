@@ -63,7 +63,7 @@ exports.modify =  async function(id, title, context, category){
 
 exports.delete = async function(noticeId){
     try{
-        await Notice.deleteOne({
+        await Notice.destroy({
             noticeId: noticeId
         });
         return true;
