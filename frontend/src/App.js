@@ -8,24 +8,24 @@ import {
   SemesterPage,
   VacationPage,
 } from "./Pages";
-import { AdminRouter, ChatRouter, PrivateRouter } from "./Router";
+import { AdminRouter, ChatRouter, PrivateRouter, PublicRouter } from "./Router";
 
 function App() {
   return (
     <>
       <Routes>
         <Route path="/" element={<MainPage />} />
-        <Route
-          path="/login"
-          element={<PrivateRouter Component={LoginPage} />}
-        />
+        <Route path="/login" element={<PublicRouter Component={LoginPage} />} />
         <Route
           path="/register"
-          element={<PrivateRouter Component={RegisterPage} />}
+          element={<PublicRouter Component={RegisterPage} />}
         />
         <Route path="/menu" element={<MenuPage />} />
         <Route path="/notice/:id" element={<NoticePage />} />
-        <Route path="/chat/*" element={<ChatRouter />} />
+        <Route
+          path="/chat/*"
+          element={<PrivateRouter Component={ChatRouter} />}
+        />
         <Route path="/admin/*" element={<AdminRouter />} />
         <Route path="/semester" element={<SemesterPage />} />
         <Route path="/vacation" element={<VacationPage />} />
