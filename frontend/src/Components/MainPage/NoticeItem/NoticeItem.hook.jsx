@@ -19,7 +19,7 @@ export const useGetNotice = ({ category }) => {
 
   useEffect(() => {
     if (allNoticeList.length === 0) return;
-    console.log(allNoticeList);
+
     if (category === "전체") setNoticeList(allNoticeList);
     else
       setNoticeList(

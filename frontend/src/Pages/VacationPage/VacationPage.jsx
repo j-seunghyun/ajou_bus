@@ -4,6 +4,7 @@ import { useGetVacationStation } from "./VacationPage.hook";
 
 export const VacationPage = () => {
   const stations = useGetVacationStation();
+
   return (
     <div>
       <Header />
