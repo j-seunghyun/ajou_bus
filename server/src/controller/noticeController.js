@@ -32,7 +32,7 @@ exports.modify = async function(req, res){
     return res.send(basicResponse(response.MODIFY_SUCCESS));
 };
 
-exports.delete = async function (req, res){
+exports.deleteNotice = async function (req, res){
     const noticeId = req.params.noticeId;
     const deleteResult = await noticeService.delete(noticeId);
     if(!deleteResult) return res.send(basicResponse(response.DB_ERROR));
