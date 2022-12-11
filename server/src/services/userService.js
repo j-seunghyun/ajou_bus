@@ -173,10 +173,10 @@ exports.delete = async function(id){
     }
 };
 
-exports.saveSession= async function (id, token){
+exports.saveSession= async function (email, token){
     try{
         await User.updateOne({
-            _id:id
+            email:email
         }, {
             sessionid:token
         });
