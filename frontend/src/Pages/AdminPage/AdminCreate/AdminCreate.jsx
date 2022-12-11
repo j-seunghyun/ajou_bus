@@ -8,7 +8,7 @@ export const AdminCreate = () => {
     handleNoticeInput,
     handleNoticeCreate,
     handleSelectCategory,
-  } = useHandleNotice();
+  } = useHandleNotice({ _title: "", _context: "" });
   return (
     <div>
       <h1 id="notice_head">아주 교통 관리자 페이지</h1>
