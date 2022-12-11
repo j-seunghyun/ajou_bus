@@ -3,7 +3,7 @@ import { timeToString } from "../../../Util/TimeParser";
 import { useGetNotice } from "./NoticeItem.hook";
 
 export const NoticeItem = ({ category }) => {
-  const noticeList = useGetNotice({ category });
+  const { noticeList } = useGetNotice({ category });
 
   return (
     <div id="main_notice_frames">

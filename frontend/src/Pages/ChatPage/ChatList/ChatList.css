@@ -53,3 +53,14 @@
   align-items: center;
   justify-content: space-between;
 }
+
+ul {
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+#Chat__List__Container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

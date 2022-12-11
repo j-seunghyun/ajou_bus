@@ -23,9 +23,8 @@ export const ChatDetail = () => {
             {messageList.map((message, i) => (
               <Message id={i} name={message.userName} message={message.msg} />
             ))}
-            <Message name="익명1" message="hihi" />
-            <MessageInput handleSendMessage={handleSendMessage} />
           </div>
+          <MessageInput handleSendMessage={handleSendMessage} />
         </div>
         <button id="chat_detail_button" onClick={handleExitChat}>
           나가기

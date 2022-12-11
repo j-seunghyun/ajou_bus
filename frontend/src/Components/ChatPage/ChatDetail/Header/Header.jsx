@@ -6,7 +6,7 @@ export const Header = () => {
       <div id="main_head_frame">
         <button id="head_menu_button">
           <Link to="/menu">
-            <img alt="menu_button" src="assets/img/menubuttonimage.png" />
+            <img alt="menu_button" src="/assets/img/menubuttonimage.png" />
           </Link>
         </button>
         <h1>아주 chat</h1>
