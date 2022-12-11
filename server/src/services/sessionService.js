@@ -13,7 +13,7 @@ exports.checkToken = async function(token){
 
 exports.destroy = async function(token){
     try{
-        await Session.destroy({
+        await Session.deleteOne({
             _id: token
         });
     }catch(error){
