@@ -1,7 +1,7 @@
 import { Navigate } from "react-router-dom";
 import { getUserId } from "../../Util/LocalStorage";
 
-export const PrivateRouter = ({ Component }) => {
+export const PublicRouter = ({ Component }) => {
   const userId = getUserId();
-  return <>{userId ? <Component /> : <Navigate to="/login" />} </>;
+  return <>{userId ? <Navigate to="/" /> : <Component />} </>;
 };
