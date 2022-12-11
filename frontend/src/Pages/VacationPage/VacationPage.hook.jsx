@@ -38,7 +38,7 @@ export const useGetVacationStation = () => {
       .get("/api/station/vacation")
       .then((res) => {
         console.log(res);
-        setStations(res.data);
+        setStations(res.data.result);
       })
       .catch((e) => setStations(dummy));
   });
