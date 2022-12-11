@@ -23,7 +23,7 @@ exports.signin = async function (req, res) {
         if(loginFlag.result){
             req.session.save();
             let token = req.session.id;
-            await userService.saveSession(loginFlag.userData.id,token);
+            await userService.saveSession(loginFlag.userData.email,token);
             return res.send(resultResponse(response.loginSUCCESS, {token, level:loginFlag.userData.level}));
         }else{
             return res.send(basicResponse({isSuccess: false, code: 400, message: loginFlag.msg}));
