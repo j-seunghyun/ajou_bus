@@ -20,7 +20,7 @@ export const useLogin = () => {
     axios.post("/api/login", state).then((res) => {
       console.log(res.data);
       if (res.data.code !== 200) {
-        alert(res.data.message);
+        alert(res.data?.message ?? "로그인에 실패하셨습니다");
         return;
       }
       setCookie(res.data.result.token);

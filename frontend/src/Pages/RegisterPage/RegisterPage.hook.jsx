@@ -24,7 +24,7 @@ export const useRegister = () => {
     if (!flag) return;
     axios.post("/api/signup", { ...state, level: 0 }).then((res) => {
       if (res.data.code !== 200) {
-        alert(res.data.message);
+        alert(res.data?.message ?? "회원가입에 실패하셨습니다.");
         return;
       }
       navigate("/login");
