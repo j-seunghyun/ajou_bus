@@ -51,6 +51,7 @@ export const RegisterPage = () => {
               id="register_email_authentication_number"
               onChange={handleToken}
               value={token}
+              placeholder="인증번호를 입력해주세요"
             />
             <button
               id="register_email_authentication_button"
@@ -65,6 +66,7 @@ export const RegisterPage = () => {
             name="password"
             value={state.password}
             onChange={handleRegisterInfo}
+            placeholder="비밀번호를 입력해주세요"
           />
           <button id="register_button" onClick={postRegister(check)}>
             회원 가입
