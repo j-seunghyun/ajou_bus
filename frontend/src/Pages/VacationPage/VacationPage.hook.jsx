@@ -11,7 +11,7 @@ export const useGetVacationStation = () => {
         setStations(res.data.result);
       })
       .catch((e) => setStations([]));
-  });
+  }, []);
 
   return stations;
 };
