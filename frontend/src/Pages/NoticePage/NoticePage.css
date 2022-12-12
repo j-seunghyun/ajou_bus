@@ -4,6 +4,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 #notice_title_inner_frame {
@@ -30,6 +32,8 @@
   /* 작성자 이름 및 작성일 */
   height: 64px;
 
+  padding: 0 20px;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,6 +70,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 #notice_content_inner_frame {
@@ -80,8 +87,11 @@
   font-size: 15px;
   line-height: 32px;
   color: #000000;
+  height: 100%;
+  border-bottom: 1px solid black;
 }
 #notice_list_button_frame {
+  margin-top: 30px;
   height: 67px;
   display: flex;
   justify-content: center;
