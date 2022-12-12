@@ -23,7 +23,10 @@ export const useRegister = () => {
   const postRegister = (flag) => () => {
     if (!flag) return;
     axios.post("/api/signup", { ...state, level: 0 }).then((res) => {
-      if (res.data.code !== 200) return;
+      if (res.data.code !== 200) {
+        alert(res.data.message);
+        return;
+      }
       navigate("/login");
     });
   };
