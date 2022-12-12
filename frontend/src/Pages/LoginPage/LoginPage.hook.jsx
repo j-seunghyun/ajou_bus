@@ -19,7 +19,10 @@ export const useLogin = () => {
   const postLogin = (navigate) => () => {
     axios.post("/api/login", state).then((res) => {
       console.log(res.data);
-      if (res.data.code !== 200) return;
+      if (res.data.code !== 200) {
+        alert(res.data.message);
+        return;
+      }
       setCookie(res.data.result.token);
       setLevel(res.data.result.level);
       setUserId(state.email);
